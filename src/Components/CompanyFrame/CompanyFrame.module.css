@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+.main{
+    margin-inline: 7.64vw;
+ display: flex;
+ gap:5.35vw;
+ margin-top: 0.34vw;
+}
+img{
+    width: 50.35vw;
+    height: 30.76vw;
+}
+.texts h1{
+    color: var(--primary-primary-700, #042352);
+    font-family: 'Inter';
+font-size: 4.44vw;
+font-style: normal;
+font-weight: 600;
+line-height: normal;    
+margin-top:3.9vw ;
+margin-bottom: 3.472vw;
+
+}
+.texts p{
+    margin: 0;
+    color: var(--primary-primary-700, #042352);
+width: 32.9vw;
+font-family: 'Inter';
+font-size: 2.22vw;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+.texts button{
+    margin-top:7.64vw;
+    color: var(--White, #FFF);
+text-align: center;
+/* Web/Button-lg */
+font-family: 'Inter';
+font-size: 1.11vw;
+font-style: normal;
+font-weight: 400;
+padding-inline: 6.53vw;
+padding-block: 1.28vw;
+line-height: normal;
+background-color: #F45E0C;
+border-radius: 0.55vw;
+border: none;
+}

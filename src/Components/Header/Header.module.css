@@ -1,0 +1,47 @@
+a{
+  color:black;
+}
+.header{
+  padding-bottom: 0.7vw;
+  border-bottom: 0.07vw solid var(--gradient-linear-stroke-bottom, rgba(12, 104, 244, 0.30));
+  background: var(--White, #FFF);
+  display: flex;
+  margin-inline: 7.64vw;
+  margin-top: 1.25vw;
+font-size: 18px;
+font-weight: 400;
+}
+.routes{
+  margin-left:16.11vw ;
+  margin-right:17.36vw ;
+
+}
+.routes ul{
+  display: flex;
+  margin: 0;
+  padding: 0;
+ margin-top: 1.3vw;
+gap:3.33vw;
+}
+.routes a{
+  padding-inline:8px ;
+}
+  a{
+    text-decoration: none;
+  }
+
+  .logo{
+   width: 3.889vw;
+   height: 4.375vw;
+
+  }
+
+  .headerButtons img{
+    width: 1.67vw;
+   height: 1.67vw;
+  }
+  .headerButtons{
+    display: flex;
+    align-items: center;
+    gap:1.67vw;
+  }

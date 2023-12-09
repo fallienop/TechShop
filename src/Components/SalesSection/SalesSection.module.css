@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+
+.productImage{
+    width: 11.67vw;
+    height: 10.14vw;
+}
+.suggestedProducts{
+    margin-top: 3.33vw;
+    margin-bottom: 3.33vw;
+    margin-inline: 7.64vw;
+   display: flex;
+width: 85vw;
+height: 22.57vw;
+flex-shrink: 0; 
+border-radius: 0.56vw;
+background: var(--primary-primary-500, #063A88);
+   -moz-user-select: -moz-none;
+   -khtml-user-select: nonse;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+   
+}
+.carouselContainer{
+margin-top: 3.056vw;
+    width: 100%;
+    overflow: hidden;
+}
+.carouselItem{
+
+    width: 12.78vw;
+    height: 16.46vw;
+    border-radius: 0.28vw;
+    border: 0.07vw solid darkblue;
+    background-color: white;
+}
+.infos{
+    color:white;
+    width: 21.67vw;
+}
+h3,h4{
+    margin: 0;
+    padding: 0;
+}
+h3{
+    font-family: 'Inter';
+font-size: 1.67vw;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+margin-left: 2.09vw;
+margin-top: 4.03vw;
+}
+h4{
+    font-family: 'Inter';
+font-size: 1.39vw;
+font-style: normal;
+font-weight: 300;
+line-height: 1.944vw; 
+margin-left: 5.42vw;
+margin-top: 0.55vw;
+}
+
+button{
+    background-color: transparent;
+color: white;
+border: none;
+margin-left: 6.32vw;
+margin-top: 7.08vw;
+font-family: 'Inter';
+font-size: 1.11vw;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+

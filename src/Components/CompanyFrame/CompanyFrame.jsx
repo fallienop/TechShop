@@ -9,7 +9,7 @@ const CompanyFrame = () => {
    <h1>Tech Heim</h1>
    <p> "Join the <span style={{color:"#F45E0C"}}>digital revolution</span>" </p>
 
-   <button>Explore More</button>
+        <button>Explore More</button>
       </div>
       <img src={laptopPhoto} alt="laptopphoto"/>
     </div>

@@ -1,0 +1,28 @@
+
+.main{
+    margin-top: 3.33vw;
+    margin-inline: 7.64vw;
+
+}
+ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+}
+ul p{
+margin: 0;
+margin-top: 0.55vw;
+}
+li{
+    padding-block: 0.55vw;
+    padding-inline: 1.25vw;
+    box-shadow: -0.14vw 0.14vw 1.04vw -0.07vw rgba(113, 113, 113, 0.12);
+    border-radius: 0.55vw;
+}
+li .simg {
+    width: 148px;
+    height: 148px;
+}
+p{
+    text-align: center;
+}

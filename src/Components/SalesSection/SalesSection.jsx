@@ -1,10 +1,9 @@
 import React from 'react'
 import style from './SalesSection.module.css'
-import g502 from '../Images/Suggested/g502.svg'
+import g502 from '../../Images/Suggested/g502.svg'
 import "react-multi-carousel/lib/styles.css";
 import Carousel from "react-multi-carousel";
-import { useEffect, useState } from 'react'
-
+import shape from '../../Images/Suggested/randomshape.png'
 
 const responsive = {
     desktop: {
@@ -29,7 +28,11 @@ const SalesSection = () => {
     
   return (
     <div className={style.suggestedProducts}>
+
     <div className={style.infos}>
+      <div >
+        <img className={style.shape} src={shape} alt="shape"/>
+        </div>
       <h3>Products On Sale</h3>
       <h4>Shop Now!</h4>
       <button>View all &gt;</button>

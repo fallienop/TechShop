@@ -1,0 +1,14 @@
+.main{
+    margin-inline:7.64vw;
+  
+}
+.newh4{
+    margin-left: 0;
+}
+.brands{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+ align-items: center;
+ margin-bottom: 3.33vw;
+}

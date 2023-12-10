@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+p{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    width: 85vw;
+    height: 29.17vw;
+    margin-inline: 7.64vw;
+    border-radius: 8px;
+    background: #223949;
+    overflow: hidden;
+    position: relative;
+    display:flex;
+    color:white;
+    margin-bottom: 100px;
+}
+.front{
+    display: flex;
+    gap: 11.18vw;
+
+    
+}
+.orange{
+    width: 55.56vw;
+height: 45.486vw;
+flex-shrink: 0;
+border-radius: 55.56vw;
+background: #FF6951;
+/* right: -400px; */
+right: -26vw;
+    bottom: -10.5vw;
+position: absolute;
+z-index: 1;
+}
+.title{
+
+font-family: 'Inter';
+font-size: 3.056vw;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+margin-bottom: 1.11vw;
+}
+.watch{
+    width: 34.72vw;
+height: 23.472vw;
+flex-shrink: 0;
+z-index: 2;
+margin-top: 2.85vw;
+}
+
+.adv{
+font-family: 'Inter';
+font-size: 1.67vw;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+}
+
+button{
+    margin: 0;
+    margin-top: 2.22vw;
+    margin-left: 8.96vw ;
+    display: inline-flex;
+    padding: 0.56vw 1.11vw;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.56vw;
+background: #FF6951;
+color: #223949;
+text-align: center;
+
+font-family: 'Inter';
+font-size: 1.11vw;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.texts{
+    margin-top: 8.89vw;
+    margin-left: 4.44vw;
+}

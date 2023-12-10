@@ -1,6 +1,6 @@
 import React from 'react'
 import style from './CompanyFrame.module.css'
-import laptopPhoto from '../Images/CompanyFrame/4d54715f5a9efbe4e0abf224c5fa5484.png'
+import laptopPhoto from '../../Images/CompanyFrame/4d54715f5a9efbe4e0abf224c5fa5484.png'
 const CompanyFrame = () => {
   return (
     <div className={style.main}>

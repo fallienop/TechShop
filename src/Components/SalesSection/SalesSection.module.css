@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 .productImage{
     width: 11.67vw;
@@ -41,6 +41,7 @@ margin-top: 3.056vw;
 h3,h4{
     margin: 0;
     padding: 0;
+   
 }
 h3{
     font-family: 'Inter';
@@ -58,7 +59,7 @@ font-style: normal;
 font-weight: 300;
 line-height: 1.944vw; 
 margin-left: 5.42vw;
-margin-top: 0.55vw;
+margin-top: 1vw;
 }
 
 button{
@@ -74,3 +75,14 @@ font-weight: 400;
 line-height: normal;
 }
 
+.shape{
+    width: 32.753vw;
+height: 30.25vw;
+transform: rotate(100.633deg);
+flex-shrink: 0;
+top: 760px;
+left: -38px;
+position: absolute;
+opacity: 0.08;
+/* filter: invert(100%) sepia(45%) saturate(479%) hue-rotate(204deg) brightness(118%) contrast(84%); */
+}

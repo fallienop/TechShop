@@ -1,9 +1,9 @@
 import React from 'react'
 import style from './Header.module.css'
-import logo from '../Images/Header/logo.svg'
-import bag from '../Images/Header/bag.svg'
-import search from '../Images/Header/search-normal.svg'
-import user from '../Images/Header/user.svg'
+import logo from '../../Images/Header/logo.svg'
+import bag from '../../Images/Header/bag.svg'
+import search from '../../Images/Header/search-normal.svg'
+import user from '../../Images/Header/user.svg'
 import { NavLink } from 'react-router-dom'
 
 const getActiveClass=(isActive )=>{

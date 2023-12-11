@@ -32,7 +32,7 @@ font-weight: 500;
 line-height: normal;
 }
 
-.texts button{
+.explorebutton{
     margin-top:7.64vw;
     color: var(--White, #FFF);
 text-align: center;

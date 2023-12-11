@@ -35,7 +35,7 @@ const SalesSection = () => {
         </div>
       <h3>Products On Sale</h3>
       <h4>Shop Now!</h4>
-      <button>View all &gt;</button>
+      <button className={style.salessectionbutton}>View all &gt;</button>
     </div>
     <div className={style.carouselContainer}>
       <Carousel responsive={responsive}>

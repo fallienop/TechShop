@@ -8,7 +8,7 @@ const WatchFrame = () => {
       <div className={style.texts}>
           <p className={style.title}>SMART WATCH</p>
           <p  className={style.adv}>Various designs and brands</p>
-          <button>view</button>
+          <button className={style.viewwatchbutton}>view</button>
       </div>
 
       <img className={style.watch} src={smartwatchs} alt="smartwatchs"/>

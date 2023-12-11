@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+.main{
+    margin-inline: 7.64vw;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 6.5vw;
+    margin-bottom:2vw ;
+}
+.ip15{
+    width: 52.5vw;
+    height: 29.17vw;
+    border-radius: 8px;
+background: linear-gradient(287deg, #B0E9C9 1.99%, #1FB6CF 48.52%, #1975B9 98.92%);
+display: flex;
+
+}
+.ps5{
+    width: 30.83vw;
+height: 29.17vw;
+border-radius: 0.556vw;
+background: #005690;
+position: relative;
+}
+.imageandtitle{
+margin-inline: 1.67vw;
+
+}
+.ip15img{
+   width: 26.27vw;
+   height: 19.583vw;
+   flex-shrink: 0;
+}
+
+.phonename{
+    font-family: 'Inter';
+font-size: 1.67vw;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+margin-top: 1.67vw;
+margin-bottom: 4.1vw ;
+text-align: left;
+margin-left: 2.2vw;
+}
+.countdown{
+    display: flex;
+    justify-content: space-between;
+        width: 16.94vw;
+        height: 3.2vw;
+}
+.countdown{
+    margin-top: 3.05vw;
+    margin-bottom: 2vw;
+}
+.counts{
+    border-radius: 0.55vw;
+    border: 0.07vw solid var(--Black, #0C0C0C);
+    box-sizing: border-box;
+    padding-top: 0.55vw;
+    width: 3.7vw;
+    height: 3.5vw;
+    font-family: 'Inter';
+font-size: 0.972vw;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+text-align: center;
+text-wrap: wrap;
+}
+
+.aboutTitle{
+    color: var(--Black, #0C0C0C);
+text-align: center;
+font-family: 'Inter';
+font-size: 1.39vw;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+margin-bottom: 0.5vw;
+}
+.about{
+    width: 17.22vw;
+height: 8.33vw;
+flex-shrink: 0;
+    color: var(--neutral-gray-2-d-2-d-2-d, #2D2D2D);
+text-align: left;
+font-family: 'Inter';
+font-size: 1.11vw;
+font-style: normal;
+font-weight: 300;
+line-height: 150%;
+}
+
+.registerbutton{
+    display: block;
+    margin:0 auto;
+    width: 9.3vw;
+    height: 3.33vw;
+    padding: 0.55vw 1.11vw;
+    text-align: center;
+    align-items: center;
+    border-radius: 0.55vw;
+    background: #0C68F4;
+    border: none;
+    outline: none;
+    color:white;
+    margin-top : 1.74vw;
+
+}
+
+.bottomorange{
+    position: absolute;
+    bottom:-0.28vw;
+}
+
+.ps5image{
+    width: 14.6vw;
+height: 11.74vw;
+flex-shrink: 0;
+position: absolute;
+z-index: 1;
+top: 11vw;
+left: 15.83vw;
+
+}
+.leftupperorange{
+    position: absolute;
+    overflow: hidden;
+    border-radius: 0.35vw;
+}
+
+.ps5title{
+color: #FCC870;
+font-family: 'Inter';
+font-size: 1.67vw;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+position: absolute;
+margin-left: 10vw;
+margin-top: 2.22vw;
+}
+
+.ps5spec{
+color: #005690;
+font-family: 'Inter';
+font-size: 1.39vw;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+position: absolute;
+top: 17.7vw;
+left: 3.06vw;
+z-index: 1;
+}
+
+.registerToPs5{
+ position: absolute;
+width: 10.28vw;
+height: 3.2vw;
+padding: 0.55vw 1.11vw;
+
+align-items: center;
+
+top:23.47vw;
+left: 4.583vw;
+border-radius: 0.55vw;
+background: var(--Primary, #0C68F4);
+outline: none;
+color:white;
+border: none;
+color: var(--White, #FFF);
+text-align: center;
+
+font-family: 'Inter';
+font-size: 1.11vw;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}

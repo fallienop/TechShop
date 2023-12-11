@@ -1,0 +1,12 @@
+.main{
+    display: flex;
+    margin-inline:7.64vw ;
+    justify-content: space-between;
+    
+}
+.promise{
+    gap:0.55vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -11,7 +11,7 @@ const CompanyFrame = () => {
 
         <button className={style.explorebutton}>Explore More</button>
       </div>
-      <img src={laptopPhoto} alt="laptopphoto"/>
+      <img className={style.laptopphoto} src={laptopPhoto} alt="laptopphoto"/>
     </div>
   )
 }

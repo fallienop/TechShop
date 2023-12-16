@@ -17,46 +17,43 @@ p{
 }
 .front{
     display: flex;
-    gap: 11.18vw;
-
-    
+    gap: 11.18vw;    
 }
 .orange{
     width: 55.56vw;
-height: 45.486vw;
-flex-shrink: 0;
-border-radius: 55.56vw;
-background: #FF6951;
-/* right: -400px; */
-right: -26vw;
+    height: 45.486vw;
+    flex-shrink: 0;
+    border-radius: 55.56vw;
+    background: #FF6951;
+    /* right: -400px; */
+    right: -26vw;
     bottom: -10.5vw;
-position: absolute;
-z-index: 1;
-}
+    position: absolute;
+    z-index: 1;
+   }
 .title{
-
-font-family: 'Inter';
-font-size: 3.056vw;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-margin-bottom: 1.11vw;
-}
+   font-family: 'Inter';
+   font-size: 3.056vw;
+   font-style: normal;
+   font-weight: 500;
+   line-height: normal;
+   margin-bottom: 1.11vw;
+  }
 .watch{
     width: 34.72vw;
-height: 23.472vw;
-flex-shrink: 0;
-z-index: 2;
-margin-top: 2.85vw;
-}
+    height: 23.472vw;
+    flex-shrink: 0;
+    z-index: 2;
+    margin-top: 2.85vw;
+   }
 
 .adv{
-font-family: 'Inter';
-font-size: 1.67vw;
-font-style: normal;
-font-weight: 300;
-line-height: normal;
-}
+    font-family: 'Inter';
+    font-size: 1.67vw;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+   }
 
 .viewwatchbutton{
     margin: 0;
@@ -67,17 +64,19 @@ line-height: normal;
     justify-content: center;
     align-items: center;
     border-radius: 0.56vw;
-background: #FF6951;
-color: #223949;
-text-align: center;
-
-font-family: 'Inter';
-font-size: 1.11vw;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-}
+    background: #FF6951;
+    color: #223949;
+    text-align: center;
+    font-family: 'Inter';
+    font-size: 1.11vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    outline: none; 
+    border: none;
+   }
+   
 .texts{
     margin-top: 8.89vw;
     margin-left: 4.44vw;
-}
+   }

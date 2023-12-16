@@ -7,6 +7,7 @@ import TopBrands from '../../Components/TopBrands/TopBrands'
 import NewProducts from '../../Components/NewProducts/NewProducts'
 import Featured from '../../Components/Featured/Featured'
 import CompanyPromises from '../../Components/CompanyPromises/CompanyPromises'
+import Footer from '../../Components/Footer/Footer'
 const MainPage = () => {
   return (
     <div>
@@ -18,6 +19,7 @@ const MainPage = () => {
         <WatchFrame/>
         <Featured/>
         <CompanyPromises/>
+        <Footer/>
     </div>
   )
 }

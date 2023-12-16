@@ -2,7 +2,7 @@
     display: flex;
     margin-inline:7.64vw ;
     justify-content: space-between;
-    
+    margin-bottom: 2.1vw;
 }
 .promise{
     gap:0.55vw;

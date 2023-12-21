@@ -1,13 +1,13 @@
 import React from 'react'
-import CompanyFrame from '../../Components/CompanyFrame/CompanyFrame'
-import SuggestedCategories from '../../Components/SuggestedCategories/SuggestedCategories'
-import SalesSection from '../../Components/SalesSection/SalesSection'
-import WatchFrame from '../../Components/SmartWatchFrame/WatchFrame'
-import TopBrands from '../../Components/TopBrands/TopBrands'
-import NewProducts from '../../Components/NewProducts/NewProducts'
-import Featured from '../../Components/Featured/Featured'
-import CompanyPromises from '../../Components/CompanyPromises/CompanyPromises'
-import Footer from '../../Components/Footer/Footer'
+import CompanyFrame from '../../MainPageComponents/CompanyFrame/CompanyFrame'
+import SuggestedCategories from '../../MainPageComponents/SuggestedCategories/SuggestedCategories'
+import SalesSection from '../../MainPageComponents/SalesSection/SalesSection'
+import WatchFrame from '../../MainPageComponents/SmartWatchFrame/WatchFrame'
+import TopBrands from '../../MainPageComponents/TopBrands/TopBrands'
+import NewProducts from '../../MainPageComponents/NewProducts/NewProducts'
+import Featured from '../../MainPageComponents/Featured/Featured'
+import CompanyPromises from '../../MainPageComponents/CompanyPromises/CompanyPromises'
+import Footer from '../../MainPageComponents/Footer/Footer'
 const MainPage = () => {
   return (
     <div>

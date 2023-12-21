@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.categories {
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+    width: 72.21vw;
+    height: 8.61vw;
+    box-shadow: 0px 0px 15px 0px rgba(45,255,196,0.73);
+    margin: 0 auto;
+    margin-top: 3.125vw;
+    padding: 0.56vw;
+}
+
+.category img {
+    width: 3.33vw;
+    height: 3.33vw;
+}
+
+
+
+.category {
+    height: 7.22vw;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:1.11vw;
+    padding: 0.56vw;
+}
+
+.category p {
+    text-wrap: nowrap;
+    color: var(--Neutral-Gray-444444, #444  );
+    text-align: center;
+    font-family: 'Inter';
+    font-size: 1.39vw;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.944vw;
+}
+
+.category:hover p {
+    color: #00ffff;
+    
+    transform: scale(1.05);
+    
+    transition: all 0.3s ease-in-out;
+   
+
+}
+.category:hover img {
+    transition: filter 0.3s ease;
+
+    filter: invert(79%) sepia(52%) saturate(985%) hue-rotate(120deg) brightness(102%) contrast(103%);
+}

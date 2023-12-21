@@ -1,8 +1,10 @@
-  import logo from './logo.svg';
-  import Header from './Components/Header/Header';
+  
+  import Header from './MainPageComponents/Header/Header';
   import './App.css';
   import MainPage from './Pages/MainPage/MainPage';
   import { createBrowserRouter,RouterProvider,Outlet,Route } from 'react-router-dom';
+  import ProductModal from './MainPageComponents/Header/Modals/ProductModal/ProductModal';
+  import ProductPage from './Pages/ProductPage/ProductPage'
   const AppLayout =()=>{
     return( 
          <>
@@ -19,8 +21,17 @@
         path: "/",
         element: <MainPage />
         
+      },
+      {
+        path: "/modal",
+        element: <ProductModal />
+        
+      },
+      {
+        path:'/products',
+        element:<ProductPage/>
       }
-    ]
+    ] 
 
 
   }

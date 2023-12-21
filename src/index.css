@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.blurryBackground {
+   
+  filter:blur(3px);
+  z-index: 999; /* Set a value higher than the modal's z-index */
+  pointer-events: none; /* Allows clicks to pass through the blurry background */
+}

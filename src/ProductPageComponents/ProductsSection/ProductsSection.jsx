@@ -22,8 +22,10 @@ const Hline = () => {
 
 const ProductsSection = () => {
 
-  let productType = useSelector(state => state.techshopslice.productType)
-  let selectedFilters = useSelector(state => state.techshopslice.selectedFilters)
+  let productType = useSelector(state => state.techshopslice.productType);
+  let selectedFilters = useSelector(state => state.techshopslice.selectedFilters);
+  const dispatch = useDispatch();
+
   const getData = async () => {
     let data = await fetch(`https://localhost:7167/getall`);;
 
@@ -37,86 +39,87 @@ const ProductsSection = () => {
     }, []);
     return arr;
   }
-  const dispatch = useDispatch();
+
 
   const [apiData, setApiData] = useState([]);
+  const [apiMainData, setMainApiData] = useState([]);
+
 
   useEffect(() => {
-
     getData().then(res => {
-    
       setApiData(res)
+      setMainApiData(res)
     });
-
-   
   }, [productType]);
 
-  useEffect(() => {
 
-  if(selectedFilters){
 
-  }
-   console.log(selectedFilters)
-  }, [selectedFilters]);
 
   useEffect(() => {
-
     function areAllValuesSame(arr) {
-
       return arr.every((value, index, array) => value === array[0]);
     }
-
 
     if (apiData.length > 0) {
       let categories = apiData.map(x => {
         return x.categoryId
-      }
-      )
-
+      })
+      
       let filters = {};
-      if (areAllValuesSame(categories)) {
 
+      if (areAllValuesSame(categories)) {
+       
         const keysToExclude = ['imageData', 'id', 'name', 'description', 'socket'];
         apiData.forEach(obj => {
-
           Object.keys(obj).forEach(x => {
             if (!keysToExclude.includes(x)) {
-
               if (!filters[x]) {
                 filters[x] = [];
               }
               filters[x].push(obj[x]);
-
               filters[x] = Array.from(new Set(filters[x]));
             }
           })
-
         });
+    
 
       }
+      
       else {
         filters = {
-          categories: []
+          categoryId: []
         }
-        apiData.forEach(x => {
+        apiMainData.forEach(x => {
 
-          filters.categories.push(x.categoryId);
+          filters.categoryId.push(x.categoryId);
         })
-
-
-        filters.categories = Array.from(new Set(filters.categories));
-       
+        filters.categoryId = Array.from(new Set(filters.categoryId));
       }
-
-
-
-
 
       dispatch(getrawFilters([filters]));
     }
   }, [apiData]);
 
 
+
+
+  useEffect(() => {
+    if (selectedFilters.length !== 0) {
+      if (selectedFilters.categoryId.length !== 0) {
+        let datas = apiMainData.filter(item => {
+          return Object.keys(selectedFilters).every(filterKey => {
+            let filterValues = selectedFilters[filterKey];
+            let itemValue = item[filterKey];
+            return filterValues.includes(itemValue);
+          });
+        });
+        setApiData(datas)
+      }
+      else {
+        setApiData(apiMainData);
+      }
+    }
+  }, [selectedFilters]);
 
 
 
@@ -129,10 +132,7 @@ const ProductsSection = () => {
           <p>{element.name}</p>
           <p style={{ fontSize: '0.9vw', fontWeight: '300' }}>{element.description}</p>
         </div> : null
-
-
       ))}
-
     </div>
   )
 }

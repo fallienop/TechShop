@@ -3,15 +3,15 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
     rawFilters: [],
     productType: '',
-    categories:['',
-    'Laptop',
-    'PC',   
-    'Monitor',
-    'CPU',  
-    'GPU',  
-    'Phone',
-    'Mouse' ],
-    selectedFilters:[]
+    categories: ['',
+        'Laptop',
+        'PC',
+        'Monitor',
+        'CPU',
+        'GPU',
+        'Phone',
+        'Mouse'],
+    selectedFilters: []
 }
 
 export const techshopSlicer = createSlice({
@@ -22,21 +22,26 @@ export const techshopSlicer = createSlice({
         getrawFilters: (state, action) => {
             state.rawFilters = action.payload
         },
-        getProductType: (state, action) => {
 
-            // if (state.productType === action.payload) {
-            //     state.productType="getall"
-            // }
-            // else {
-                state.productType = action.payload
-            // }
+        getProductType: (state, action) => {
+            state.productType = action.payload
         },
+
         getSelectedFilters: (state, action) => {
             state.selectedFilters = action.payload
         },
+        resetState: (state, action) => {
+            switch (action.payload) {
+                case 'RESET':
+                  return initialState;
+                // Diğer durumlar...
+                default:
+                  return state;
+              }
+        }
     }
 
 })
 
-export const { getrawFilters, getProductType,getSelectedFilters } = techshopSlicer.actions
+export const { getrawFilters, getProductType, getSelectedFilters,resetState } = techshopSlicer.actions
 export default techshopSlicer.reducer

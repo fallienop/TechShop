@@ -7,12 +7,12 @@ import user from '../../Images/Header/user.svg';
 import { NavLink } from 'react-router-dom';
 import ProductModal from './Modals/ProductModal/ProductModal';
 
-const getActiveClass = (isActive) => {
-  return isActive ? 'active' : '';
+const getActiveClass = (isActive, path) => {
+  return isActive && window.location.pathname === path ? 'active' : '';
 };
 
-const getApplyActiveStyle = (isActive) => {
-  return isActive ? { color: 'blue' } : {};
+const getApplyActiveStyle = (isActive, path) => {
+  return isActive && window.location.pathname === path ? { color: 'blue' } : {};
 };
 
 const Header = () => {
@@ -51,32 +51,39 @@ const Header = () => {
 
         <div className={style.routes}>
           <ul>
-            <NavLink
-              exact='true'
-              style={(isActive) => getApplyActiveStyle(isActive)}
-              className={(isActive) => getActiveClass(isActive)}
-              to="/"
-            >
-              Home
-            </NavLink>
-            <NavLink
-            onMouseOver={() => toggleModal(true)}
-              onMouseOut={() => toggleModal(false)}
-              onMouseEnter={() => toggleModal(true)}
-              className={(isActive) => getActiveClass(isActive)}
-              to="/products"
-            >
-              Products
-            </NavLink>
-            <NavLink className={(isActive) => getActiveClass(isActive)} to="/Blog">
-              Blog
-            </NavLink>
-            <NavLink className={(isActive) => getActiveClass(isActive)} to="/modal">
-              FAQ
-            </NavLink>
-            <NavLink className={(isActive) => getActiveClass(isActive)} to="/Contact">
-              Contact Us
-            </NavLink>
+          <NavLink
+  exact="true"  // <- Leave this for the root path only
+  style={(isActive) => getApplyActiveStyle(isActive, '/')} 
+  aria-hidden="true"
+  className={(isActive) => getActiveClass(isActive, '/')} 
+  to="/"
+>
+  Home
+</NavLink>
+
+<NavLink
+  to="/products"  
+  onMouseOver={() => toggleModal(true)}
+  onMouseOut={() => toggleModal(false)}
+  onMouseEnter={() => toggleModal(true)}
+  className={(isActive) => getActiveClass(isActive, '/products')} 
+  style={(isActive) => getApplyActiveStyle(isActive, '/products')}
+>
+  Products
+</NavLink>
+
+<NavLink to="/Blog"   className={(isActive) => getActiveClass(isActive, '/Blog')} style={(isActive) => getApplyActiveStyle(isActive, '/Blog')}>
+  Blog
+</NavLink>
+
+<NavLink to="/modal" className={(isActive) => getActiveClass(isActive, '/modal')} style={(isActive) => getApplyActiveStyle(isActive, '/modal')}>
+  FAQ
+</NavLink>
+
+<NavLink to="/Contact" className={(isActive) => getActiveClass(isActive, '/Contact')} style={(isActive) => getApplyActiveStyle(isActive, '/Contact')}>
+  Contact Us
+</NavLink>
+
           </ul>
         </div>
 

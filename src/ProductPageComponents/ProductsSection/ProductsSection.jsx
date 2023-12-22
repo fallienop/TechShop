@@ -23,6 +23,7 @@ const Hline = () => {
 const ProductsSection = () => {
 
   let productType = useSelector(state => state.techshopslice.productType)
+  let selectedFilters = useSelector(state => state.techshopslice.selectedFilters)
   const getData = async () => {
     let data = await fetch(`https://localhost:7167/getall`);;
 
@@ -43,28 +44,23 @@ const ProductsSection = () => {
   useEffect(() => {
 
     getData().then(res => {
-      // console.log(res)
+    
       setApiData(res)
     });
 
-    // console.log(apiData)
+   
   }, [productType]);
 
   useEffect(() => {
 
-    function categoryReturner(id) {
-      let category = '';
-      switch (id) {
-        case 1: category = 'Laptop'; break;
-        case 2: category = 'PC'; break;
-        case 3: category = 'Monitor'; break;
-        case 4: category = 'CPU'; break;
-        case 5: category = 'GPU'; break;
-        case 6: category = 'Phone'; break;
-        case 7: category = 'Mouse'; break;
-      }
-      return category;
-    }
+  if(selectedFilters){
+
+  }
+   console.log(selectedFilters)
+  }, [selectedFilters]);
+
+  useEffect(() => {
+
     function areAllValuesSame(arr) {
 
       return arr.every((value, index, array) => value === array[0]);
@@ -77,32 +73,45 @@ const ProductsSection = () => {
       }
       )
 
+      let filters = {};
       if (areAllValuesSame(categories)) {
 
+        const keysToExclude = ['imageData', 'id', 'name', 'description', 'socket'];
+        apiData.forEach(obj => {
+
+          Object.keys(obj).forEach(x => {
+            if (!keysToExclude.includes(x)) {
+
+              if (!filters[x]) {
+                filters[x] = [];
+              }
+              filters[x].push(obj[x]);
+
+              filters[x] = Array.from(new Set(filters[x]));
+            }
+          })
+
+        });
+
+      }
+      else {
+        filters = {
+          categories: []
+        }
+        apiData.forEach(x => {
+
+          filters.categories.push(x.categoryId);
+        })
 
 
+        filters.categories = Array.from(new Set(filters.categories));
+       
       }
 
 
 
 
-      let filters = {};
-      const keysToExclude = ['imageData', 'id', 'name', 'description', 'socket'];
-      apiData.forEach(obj => {
 
-        Object.keys(obj).forEach(x => {
-          if (!keysToExclude.includes(x)) {
-
-            if (!filters[x]) {
-              filters[x] = [];
-            }
-            filters[x].push(obj[x]);
-
-            filters[x] = Array.from(new Set(filters[x]));
-          }
-        })
-
-      });
       dispatch(getrawFilters([filters]));
     }
   }, [apiData]);

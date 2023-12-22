@@ -3,6 +3,21 @@
     height: fit-content;
     width: 16.11vw;
     border: 0.06vw solid rgba(0, 0, 0, 0.18);
-  
+     padding: 1vw;
+
+}
+
+.applyfilterbutton{
+    color: cyan;
+    text-align: right;
+    font-weight: 400;
+    /* text-decoration: underline; */
+    font-size: 1vw;
+    transition: color 0.3s ease-in-out;
+
+}
+
+.applyfilterbutton:hover{
+  color:rgb(59, 71, 163);
 
 }

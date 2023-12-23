@@ -36,13 +36,28 @@ gap:3.33vw;
 
   }
 
-  .headerButtons img{
+  .headerButtons img {
     width: 1.67vw;
-   height: 1.67vw;
+    height: 1.67vw;
+    
   }
+  
+  /* .blurryBackground {
+    overflow: hidden;
+  } */
+  .headerButton:hover {
+ 
+    filter: brightness(0) saturate(100%) invert(8%) sepia(99%) saturate(6370%) hue-rotate(244deg) brightness(114%) contrast(138%);
+  }
+  /* .headerButton {
+  transition: filter 0.4s ease;
+  } */
   .headerButtons{
     display: flex;
     align-items: center;
     gap:1.67vw;
   }
+
+
+  
 

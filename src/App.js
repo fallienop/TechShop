@@ -5,6 +5,7 @@
   import { createBrowserRouter,RouterProvider,Outlet,Route } from 'react-router-dom';
   import ProductModal from './MainPageComponents/Header/Modals/ProductModal/ProductModal';
   import ProductPage from './Pages/ProductPage/ProductPage'
+  import SearchModal from './MainPageComponents/Header/Modals/SearchModal/SearchModal';
   const AppLayout =()=>{
     return( 
          <>
@@ -24,12 +25,16 @@
       },
       {
         path: "/modal",
-        element: <ProductModal />
+        element: <SearchModal />
         
       },
       {
         path:'/products',
         element:<ProductPage/>
+      },
+      {
+        path:'/Contact',
+        element:<ProductModal/>
       }
     ] 
 

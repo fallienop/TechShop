@@ -64,13 +64,13 @@ const ProductsSection = () => {
       let categories = apiData.map(x => {
         return x.categoryId
       })
-      
+
       let filters = {};
 
       if (areAllValuesSame(categories)) {
-       
+
         const keysToExclude = ['imageData', 'id', 'name', 'description', 'socket'];
-        apiData.forEach(obj => {
+        apiMainData.forEach(obj => {
           Object.keys(obj).forEach(x => {
             if (!keysToExclude.includes(x)) {
               if (!filters[x]) {
@@ -81,10 +81,10 @@ const ProductsSection = () => {
             }
           })
         });
-    
+
 
       }
-      
+
       else {
         filters = {
           categoryId: []
@@ -102,10 +102,21 @@ const ProductsSection = () => {
 
 
 
+  const areAllPropertiesEmpty = (obj) => {
+    return Object.values(obj).every(value => value === null || value === undefined || value.length === 0 || value === '');
+  };
 
   useEffect(() => {
-    if (selectedFilters.length !== 0) {
-      if (selectedFilters.categoryId.length !== 0) {
+    if (selectedFilters && Object.keys(selectedFilters).length !== 0) {
+
+     
+
+      if (
+        // (
+        // selectedFilters.categoryId && selectedFilters.categoryId.length !== 0) ||
+        // Object.keys(selectedFilters).includes('categoryId') &&
+         Object.keys(selectedFilters).length == 1) {
+
         let datas = apiMainData.filter(item => {
           return Object.keys(selectedFilters).every(filterKey => {
             let filterValues = selectedFilters[filterKey];
@@ -113,12 +124,47 @@ const ProductsSection = () => {
             return filterValues.includes(itemValue);
           });
         });
-        setApiData(datas)
+
+        setApiData(datas);
+
+        setMainApiData(datas);
+
+
       }
       else {
-        setApiData(apiMainData);
+
+
+
+        if (!areAllPropertiesEmpty(selectedFilters)) {
+          let filteredData = apiMainData;
+
+          // Check if price filter exists, filter by price range
+          if (selectedFilters.prices) {
+            const [minPrice, maxPrice] = selectedFilters.prices;
+            filteredData = filteredData.filter(item => item.price >= minPrice && item.price <= maxPrice);
+          }
+
+          // Apply other filters
+          filteredData = filteredData.filter(item => {
+            return Object.keys(selectedFilters).every(filterKey => {
+              if (filterKey === 'prices') {
+                return true; // already handled by the price filter logic above
+              }
+              let filterValues = selectedFilters[filterKey];
+              let itemValue = item[filterKey];
+              return filterValues.includes(itemValue);
+            });
+          });
+
+          setApiData(filteredData);
+        }
+
+        else {
+          setApiData(apiMainData)
+        }
       }
     }
+
   }, [selectedFilters]);
 
 

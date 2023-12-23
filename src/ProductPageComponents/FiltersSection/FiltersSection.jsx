@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getSelectedFilters, resetState } from '../../Redux/techshopSlicer';
 import style from './FiltersSection.module.css';
@@ -14,14 +14,17 @@ const FiltersSection = () => {
   const [showPriceSection, setPriceSection] = useState(false);
   const [filters, setFilters] = useState([]);
   const animatedComponents = makeAnimated();
+  const minimumPrice = useRef();
+  const maximumPrice = useRef();
+
 
   const priceReturner = () => {
     if (showPriceSection) {
       return <div className={style.priceinputBox}>
         <p>price</p>
         <div className={style.priceinput}>
-          <input onInput={(e) => inputNumberValidator(e)} type='text' placeholder='min'></input>
-          <input onInput={(e) => inputNumberValidator(e)} type='text' placeholder='max'></input>
+          <input  ref={minimumPrice} onInput={(e) => inputNumberValidator(e)} type='text' placeholder='min'></input>
+          <input  ref={maximumPrice}  onInput={(e) => inputNumberValidator(e)} type='text' placeholder='max'></input>
         </div>
       </div>
     }
@@ -110,10 +113,33 @@ const FiltersSection = () => {
   };
 
   const sendSelectedFilters = () => {
-    dispatch(getSelectedFilters(selectedOptions))
+   let priceFilter= handlePrices();
+   if(priceFilter!=null){
+  
+   const pricedSelectedopts = Object.assign({prices: priceFilter}, selectedOptions);
+   dispatch(getSelectedFilters(pricedSelectedopts))
+
+  }else{
+    dispatch(getSelectedFilters(selectedOptions))}
   }
 
-
+  const handlePrices = () => {
+    let minimum = minimumPrice.current;
+    let maximum = maximumPrice.current;
+  
+    if (minimum && maximum && minimum.value && maximum.value) {
+      let minimumValue = minimum.value;
+      let maximumValue = maximum.value;
+  
+      if (minimumValue < maximumValue) {
+        return [minimumValue, maximumValue];
+      }
+    }
+  
+    // Handle the case where minimum or maximum is undefined or their values are not valid
+    return null;
+  };
+  
 
 
   useEffect(() => {

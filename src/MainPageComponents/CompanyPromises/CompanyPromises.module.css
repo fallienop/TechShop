@@ -1,12 +1,51 @@
-.main{
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.main {
     display: flex;
-    margin-inline:7.64vw ;
+    margin-inline: 7.64vw;
     justify-content: space-between;
     margin-bottom: 2.1vw;
 }
-.promise{
-    gap:0.55vw;
+
+.promise {
+    gap: 0.55vw;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+.promiseText {
+    font-family: 'Inter';
+    font-size: 1.5vw;
+    font-style: normal;
+    line-height: 140%;
+}
+
+@media only screen and (max-width: 768px) {
+    .main {
+        display: flex;
+        margin-inline: 6.67vw;
+        justify-content: none   ;
+        flex-direction: column;
+        margin-bottom: 5.1vw;
+        width: 59vw;
+        height: 38.89vw;
+    }
+    
+    .promise {
+        width: 100%;
+        gap: 2.2vw;
+        display: flex;
+        align-items: center ;
+        justify-content: left;
+    }
+    
+    .promiseText {
+ 
+        font-size: 4vw;
+      text-wrap : nowrap;
+        line-height: normal;
+    }
+    
+
+  }

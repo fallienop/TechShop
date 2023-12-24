@@ -1,50 +1,140 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-.main{
+
+.main {
     margin-inline: 7.64vw;
- display: flex;
- gap:5.35vw;
- margin-top: 0.34vw;
+    display: flex;
+    gap: 5.35vw;
+    margin-top: 0.34vw;
 }
-.laptopphoto{
+
+.laptopphoto {
     width: 50.35vw;
     height: 30.76vw;
 }
-.texts h1{
+
+.texts h1 {
     color: var(--primary-primary-700, #042352);
     font-family: 'Inter';
-font-size: 4.44vw;
-font-style: normal;
-font-weight: 600;
-line-height: normal;    
-margin-top:3.9vw ;
-margin-bottom: 3.472vw;
+    font-size: 4.44vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 3.9vw;
+    margin-bottom: 3.472vw;
 
 }
-.texts p{
+
+.texts p {
     margin: 0;
     color: var(--primary-primary-700, #042352);
     text-align: left;
-width: 32.9vw;
-font-family: 'Inter';
-font-size: 2.22vw;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
+    width: 32.9vw;
+    font-family: 'Inter';
+    font-size: 2.22vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 }
 
-.explorebutton{
-    margin-top:7.64vw;
+.explorebutton {
+    margin-top: 7.64vw;
     color: var(--White, #FFF);
-text-align: center;
-/* Web/Button-lg */
-font-family: 'Inter';
-font-size: 1.11vw;
-font-style: normal;
-font-weight: 400;
-padding-inline: 6.53vw;
-padding-block: 1.28vw;
-line-height: normal;
-background-color: #F45E0C;
-border-radius: 0.55vw;
-border: none;
+    text-align: center;
+    /* Web/Button-lg */
+    font-family: 'Inter';
+    font-size: 1.11vw;
+    font-style: normal;
+    font-weight: 400;
+    padding-inline: 6.53vw;
+    padding-block: 1.28vw;
+    line-height: normal;
+    background-color: #F45E0C;
+    border-radius: 0.55vw;
+    border: none;
+}
+
+@media only screen and (max-width: 768px) {
+
+
+
+
+    .main {
+        margin-inline: 6.67vw;
+        display: flex;
+        gap: 0vw;
+        margin-top: 6vw;
+    }
+
+    .laptopphoto {
+        width: 58vw;
+        height: 43.6vw;
+    }
+
+    .texts h1 {
+        color: var(--primary-primary-700, #042352);
+        font-family: 'Inter';
+        font-size: 4.44vw;
+        font-style: normal;
+        width: 36vw;
+        line-height: normal;
+        margin-top: 4.44vw;
+        margin-bottom: 2vw;
+        font-size: 6.67vw;
+        font-weight: 500;
+    }
+
+    .texts p {
+        margin: 0;
+        color: var(--primary-primary-700, #042352);
+        text-align: left;
+        width: 32.9vw;
+        font-family: 'Inter';
+        font-size: 2.22vw;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+
+
+
+
+        font-size: 2.5vw;
+
+    }
+
+    .explorebutton {
+        margin-top: 12.64vw;
+        color: var(--White, #FFF);
+        text-align: center;
+       
+        font-family: 'Inter';
+        font-size: 1.11vw;
+        font-style: normal;
+        font-weight: 400;
+        padding-inline: 6.53vw;
+        padding-block: 1.28vw;
+        line-height: normal;
+        background-color: #F45E0C;
+        border-radius: 0.55vw;
+        border: none;
+        font-size: 2.5vw;
+        font-weight: 500;
+
+
+
+justify-content: center;
+align-items: center;
+flex-shrink: 0;
+padding-inline: 3.6vw;
+        padding-block: 2.8vw;
+border-radius: 1.22vw;
+
+
+font-size: 2.8vw;
+
+    }
+
+
+
+
+
 }

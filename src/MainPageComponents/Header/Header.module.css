@@ -8,8 +8,9 @@ a{
   display: flex;
   margin-inline: 7.64vw;
   margin-top: 1.25vw;
-font-size: 18px;
+font-size: 1.25vw;
 font-weight: 400;
+width: calc( 100% - 14.68vw );
 }
 .routes{
   margin-left:16.11vw ;
@@ -24,7 +25,7 @@ font-weight: 400;
 gap:3.33vw;
 }
 .routes a{
-  padding-inline:8px ;
+  padding-inline:0.55vw ;
 }
   a{
     text-decoration: none;
@@ -58,6 +59,52 @@ gap:3.33vw;
     gap:1.67vw;
   }
 
-
+  .navlink{
+    color: var(--Black, #0C0C0C);
+    text-align: center;
+    /* Web/Body-lg */
+    font-family: 'Inter';
+    font-size: 1.25vw;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-wrap: nowrap ;
+  }
   
 
+  @media only screen and (max-width: 768px) {
+    .header {
+      margin-inline: 6.67vw;
+      padding-bottom: 0.5vw;
+      font-size: 1vw;
+    }
+  
+    .routes {
+      margin: 0 auto;
+      width: 30vw;
+    }
+  
+    .routes ul {
+      margin-top: 1.3vw;
+      gap: 1.67vw;
+    }
+  
+    .routes a {
+      padding-inline: 0.55vw;
+    }
+  
+    .logo {
+      width: 4.44vw;
+      height: auto;
+    }
+  
+    .headerButtons img {
+      width: 2.67vw;
+      height: 2.67vw;
+    }
+  
+    .navlink {
+      font-size: 2.4vw;
+    }
+  }
+  

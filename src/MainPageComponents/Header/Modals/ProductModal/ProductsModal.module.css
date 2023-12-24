@@ -1,24 +1,13 @@
 
 
 
-/* .modal {
-    position: fixed;
- 
-    z-index: 1000;
-width: 85vw;
 
- border: 2px solid cyan; 
-border-radius: 0px 0px 0.56vw 0.56vw;
-background: var(--White, #FFF);
-height: 40vh;
-margin: 0 auto;
-} */
 
 .modal {
     position: fixed;
     z-index: 1000;
     width: 85vw;
-border-radius: 0px 0px 0.56vw 0.56vw;
+border-radius: 0vw 0vw 0.56vw 0.56vw;
 /* height: 40vh; */
     height: fit-content;
     left: 50%;

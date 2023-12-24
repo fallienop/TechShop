@@ -16,8 +16,12 @@ img {
   height: 17vw;
 }
 
-.upper {
+.upperInfo {
   display: flex;
+}
+.upper{
+  display: flex;
+
 }
 
 
@@ -27,9 +31,16 @@ img {
   display: flex;
 }
 
+.contacts img{
+width: 1.39vw;
+height: 1.39vw;
+}
 
 
+.footerTitle{
+  font-size:  1.11vw !important;
 
+}
 
 .footerSections p {
   color: var(--Neutral-Gray-CBCBCB, #CBCBCB);
@@ -90,6 +101,7 @@ img {
   outline: none;
   border: none;
   color: white;
+  width: 18vw;
 }
 
 .news_and_update_input::placeholder {
@@ -114,6 +126,11 @@ img {
   filter: invert(17%) sepia(59%) saturate(4469%) hue-rotate(335deg) brightness(91%) contrast(116%);
 }
 
+.news_and_update_inputimg{
+  width: 1.67vw;
+  height: auto;
+}
+
 .companyMedias {
   margin-left: 0.07vw;
   margin-top: 1.11vw;
@@ -130,7 +147,7 @@ img {
 
 .gotoTopIconBox {
   display: flex;
-  margin-top: 2.083vw;
+  margin-top: 1vw;
   justify-content: right;
 }
 
@@ -181,3 +198,132 @@ img {
 }
 
 
+@media only screen and (max-width: 768px) {
+  .upper {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .upperInfo{
+    margin-top: 3vw;
+    flex-direction: column;
+    gap:4vw;
+  }
+  .main {
+    margin-inline: 7.46vw;
+    padding-top: 3.33vw;
+    height: fit-content;
+  }
+
+  .news_and_update_text {
+    align-self: stretch;
+    text-align: center; 
+    
+    font-size: 4.44vw;
+    line-height: 150%;
+    font-weight: 500;
+    margin-bottom: 1.11vw;
+  
+  }
+
+  .news_and_update_inputBox {
+ 
+ 
+    width: 82.2vw;
+    height: 11.1vw;
+    padding: 2vw;
+  
+    align-items: center;
+  
+    flex-shrink: 0;
+    border-radius: 2.22vw;
+    border: 0.07vw solid var(--Neutral-Gray-F9F9F9, #F9F9F9);
+  }
+  .news_and_update_inputimg{
+    width: 5.55vw;
+    height: auto;
+  }
+  
+.news_and_update_input {
+  margin-left: 0.55vw;
+
+  width: 60vw;
+  height: 5vw;
+  margin-top: 2vw;
+}
+
+.news_and_update_input::placeholder {
+  
+  opacity: 0.5;
+
+
+  font-size: 3.89vw;
+
+  font-weight: 300;
+  
+}
+.contacts {
+gap: 1vw;
+}
+.righticon {
+
+  margin-top: 1vw;
+}
+.footerSections{
+  width: fit-content;
+  height: fit-content;
+}
+.footerSections p {
+
+
+  font-size: 3.33vw;
+
+  font-weight: 500;
+  line-height: 150%;
+
+  margin-bottom: 0.625vw;
+  text-wrap: nowrap;
+}
+.footerTitle{
+  font-size: 4.44vw !important;
+}
+.companyMedias {
+  margin-left: 0.07vw;
+  margin-top: 2.9vw;
+
+  gap: 2.22vw;
+  /* justify-content: center; */
+}
+.companyMedias img {
+  width: 6.66vw;
+  height: 6.66vw;
+}
+
+.footerSections img {
+  margin-bottom: 0.625vw;
+  margin-right: 0.3vw;
+  width: 4vw;
+    height: auto;
+}
+
+
+.paymentService {
+  display: flex;
+  gap: 1.11vw;
+
+}
+
+.paymentService img {
+  width: 8.89vw;
+  height: 6.67vw;
+}
+
+.gotoTopIcon {
+  
+  width: 11.11vw;
+  height: 11.11vw;
+ 
+  
+  border-radius: 13.33vw;
+
+}
+}

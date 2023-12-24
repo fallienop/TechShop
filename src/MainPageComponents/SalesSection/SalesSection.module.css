@@ -1,32 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-.productImage{
+.productImage {
     width: 11.67vw;
     height: 10.14vw;
 }
-.suggestedProducts{
+
+.suggestedProducts {
     margin-top: 3.33vw;
     margin-bottom: 3.33vw;
     margin-inline: 7.64vw;
-   display: flex;
-width: 85vw;
-height: 22.57vw;
-flex-shrink: 0; 
-border-radius: 0.56vw;
-background: var(--primary-primary-500, #063A88);
-   -moz-user-select: -moz-none;
-   -khtml-user-select: nonse;
-   -webkit-user-select: none;
-   -ms-user-select: none;
-   user-select: none;
-   
+    display: flex;
+    width: 85vw;
+    height: 22.57vw;
+    flex-shrink: 0;
+    border-radius: 0.56vw;
+    background: var(--primary-primary-500, #063A88);
+    -moz-user-select: -moz-none;
+    -khtml-user-select: nonse;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
 }
-.carouselContainer{
-margin-top: 3.056vw;
+
+.carouselContainer {
+    margin-top: 3.056vw;
     width: 100%;
     overflow: hidden;
 }
-.carouselItem{
+
+.carouselItem {
 
     width: 12.78vw;
     height: 16.46vw;
@@ -34,55 +37,167 @@ margin-top: 3.056vw;
     border: 0.07vw solid darkblue;
     background-color: white;
 }
-.infos{
-    color:white;
+
+.infos {
+    color: white;
     width: 21.67vw;
 }
-h3,h4{
+
+h3,
+h4 {
     margin: 0;
     padding: 0;
-   
-}
-h3{
-    font-family: 'Inter';
-font-size: 1.67vw;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-margin-left: 2.09vw;
-margin-top: 4.03vw;
-}
-h4{
-    font-family: 'Inter';
-font-size: 1.39vw;
-font-style: normal;
-font-weight: 300;
-line-height: 1.944vw; 
-margin-left: 5.42vw;
-margin-top: 1vw;
+
 }
 
-.salessectionbutton{
+h3 {
+    font-family: 'Inter';
+    font-size: 1.67vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-left: 2.09vw;
+    margin-top: 4.03vw;
+}
+
+h4 {
+    font-family: 'Inter';
+    font-size: 1.39vw;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.944vw;
+    margin-left: 5.42vw;
+    margin-top: 1vw;
+}
+
+.salessectionbutton {
     background-color: transparent;
-color: white;
-border: none;
-margin-left: 6.32vw;
-margin-top: 7.08vw;
-font-family: 'Inter';
-font-size: 1.11vw;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+    color: white;
+    border: none;
+    margin-left: 6.32vw;
+    margin-top: 7.08vw;
+    font-family: 'Inter';
+    font-size: 1.11vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
-.shape{
+.shape {
     width: 32.753vw;
-height: 30.25vw;
-transform: rotate(100.633deg);
-flex-shrink: 0;
-top: 760px;
-left: -38px;
-position: absolute;
-opacity: 0.08;
-/* filter: invert(100%) sepia(45%) saturate(479%) hue-rotate(204deg) brightness(118%) contrast(84%); */
+    height: 30.25vw;
+    transform: rotate(100.633deg);
+    flex-shrink: 0;
+    top: 50vw;
+    left: -2.5vw;
+    position: absolute;
+    opacity: 0.08;
+    /* filter: invert(100%) sepia(45%) saturate(479%) hue-rotate(204deg) brightness(118%) contrast(84%); */
+}
+
+.productName {
+    overflow: hidden;
+    color: var(--Black, #0C0C0C);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /* Web/Body-xs */
+    font-family: 'Inter';
+    font-size: 0.83vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 0 0;
+    align-self: stretch;
+    margin-top: 3vw;
+    margin-inline: 1vw;
+    text-wrap: wrap;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    .productImage {
+        width: 23.88vw;
+        height: 20vw;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .suggestedProducts {
+        margin-top: 6.67vw;
+        margin-bottom: 6.67vw;
+        margin-inline: 6.67vw;
+
+        width: 86.7vw;
+        height: 48.33vw;
+        gap: 4.44vw;
+        border-radius: 2.2vw;
+
+    }
+
+    .carouselContainer {
+        margin-top: 4.44vw;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .carouselItem {
+
+        width: 28.3vw;
+        height: 39.4vw;
+        border-radius: 1.11vw;
+        border: 0.07vw solid darkblue;
+        background-color: white;
+    }
+
+    .infos {
+        color: white;
+        width: 51.22vw;
+    }
+
+    h3 {
+
+        font-size: 3.9vw;
+        font-weight: 500;
+        width: 32.2vw;
+        margin-left: 2.5vw;
+        margin-top: 4.44vw;
+    }
+
+    h4 {
+
+        font-size: 1.39vw;
+        margin-left: 9.42vw;
+        margin-top: 2.22vw;
+        font-family: 'Inter';
+        font-size: 3.33vw;
+    }
+
+    .salessectionbutton {
+
+        margin-left: 9.32vw;
+        margin-top: 22vw;
+        font-size: 3.6vw;
+    }
+
+    .shape {
+        width: 75.27vw;
+        height: 65.525vw;
+        transform: rotate(94.633deg);
+        top: 105vw;
+        left: -18.5vw;        
+    }
+
+    .productName {
+        font-size: 3.33vw;
+        margin-top: 3.3vw;
+        margin-inline: 2.22vw;
+
+    }
+
+
+
 }

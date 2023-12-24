@@ -56,7 +56,7 @@ const SuggestedCategories = () => {
 
                <Link to={`/products`}>
                <li onClick={(e) => sendType(e)}>
-                  <img src={pcCase} alt="phone" className={style.simg} />
+                  <img  src={pcCase} alt="phone" className={style.simg} />
                   <p>PC</p>
 
                </li>
@@ -65,7 +65,7 @@ const SuggestedCategories = () => {
              <Link to={`/products`}>
 
                <li onClick={(e) => sendType(e)}>
-                  <img className={style.simg} src={phoneP} alt="phone" />
+                  <img  className={style.simg} src={phoneP} alt="phone" />
                   <p>Phone</p>
 
                </li>

@@ -12,3 +12,11 @@
  align-items: center;
  margin-bottom: 3.33vw;
 }
+
+@media only screen and (max-width: 768px) {
+    .newh4{
+        font-size: 4.44vw;
+        line-height: 150%;
+    }
+  }
+

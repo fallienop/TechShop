@@ -28,3 +28,11 @@ line-height: normal;
 .productinfo{
     margin-top: 2vw;
 }
+
+.details{
+    display: block;
+    
+}
+.details p{
+text-align: left;
+}

@@ -6,12 +6,14 @@
   import ProductModal from './MainPageComponents/Header/Modals/ProductModal/ProductModal';
   import ProductPage from './Pages/ProductPage/ProductPage'
   import ProductDetails from './Pages/ProductDetails/ProductDetails';
+  // import Footer from './MainPageComponents/Footer/Footer';
   
   const AppLayout =()=>{
     return( 
          <>
     <Header/>
     <Outlet/>
+    {/* <Footer/> */}
     </>
   )}
   const router=createBrowserRouter([

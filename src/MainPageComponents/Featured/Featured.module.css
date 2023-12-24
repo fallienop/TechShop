@@ -1,58 +1,68 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-.main{
+
+.main {
     margin-inline: 7.64vw;
     display: flex;
     justify-content: space-between;
     margin-right: 6.5vw;
-    margin-bottom:2vw ;
+    margin-bottom: 2vw;
 }
-.ip15{
+
+.ip15 {
     width: 52.5vw;
     height: 29.17vw;
-    border-radius: 8px;
-background: linear-gradient(287deg, #B0E9C9 1.99%, #1FB6CF 48.52%, #1975B9 98.92%);
-display: flex;
+    border-radius: 0.55vw;
+    background: linear-gradient(287deg, #B0E9C9 1.99%, #1FB6CF 48.52%, #1975B9 98.92%);
+    display: flex;
 
 }
-.ps5{
+
+.ps5 {
     width: 30.83vw;
-height: 29.17vw;
-border-radius: 0.556vw;
-background: #005690;
-position: relative;
-}
-.imageandtitle{
-margin-inline: 1.67vw;
-
-}
-.ip15img{
-   width: 26.27vw;
-   height: 19.583vw;
-   flex-shrink: 0;
+    height: 29.17vw;
+    border-radius: 0.556vw;
+    background: #005690;
+    position: relative;
+    overflow: hidden;
 }
 
-.phonename{
+.imageandtitle {
+    margin-inline: 1.67vw;
+
+}
+
+.bottomOrangeSvg {}
+
+.ip15img {
+    width: 26.27vw;
+    height: 19.583vw;
+    flex-shrink: 0;
+}
+
+.phonename {
     font-family: 'Inter';
-font-size: 1.67vw;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-margin-top: 1.67vw;
-margin-bottom: 4.1vw ;
-text-align: left;
-margin-left: 2.2vw;
+    font-size: 1.67vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 1.67vw;
+    margin-bottom: 4.1vw;
+    text-align: left;
+    margin-left: 2.2vw;
 }
-.countdown{
+
+.countdown {
     display: flex;
     justify-content: space-between;
-        width: 16.94vw;
-        height: 3.2vw;
-}
-.countdown{
+    width: 16.94vw;
+    height: 3.2vw;
     margin-top: 3.05vw;
     margin-bottom: 2vw;
 }
-.counts{
+
+
+
+.counts {
     border-radius: 0.55vw;
     border: 0.07vw solid var(--Black, #0C0C0C);
     box-sizing: border-box;
@@ -60,40 +70,41 @@ margin-left: 2.2vw;
     width: 3.7vw;
     height: 3.5vw;
     font-family: 'Inter';
-font-size: 0.972vw;
-font-style: normal;
-font-weight: 300;
-line-height: normal;
-text-align: center;
-text-wrap: wrap;
+    font-size: 0.972vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+    text-wrap: wrap;
 }
 
-.aboutTitle{
+.aboutTitle {
     color: var(--Black, #0C0C0C);
-text-align: center;
-font-family: 'Inter';
-font-size: 1.39vw;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-margin-bottom: 0.5vw;
-}
-.about{
-    width: 17.22vw;
-height: 8.33vw;
-flex-shrink: 0;
-    color: var(--neutral-gray-2-d-2-d-2-d, #2D2D2D);
-text-align: left;
-font-family: 'Inter';
-font-size: 1.11vw;
-font-style: normal;
-font-weight: 300;
-line-height: 150%;
+    text-align: center;
+    font-family: 'Inter';
+    font-size: 1.39vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 0.5vw;
 }
 
-.registerbutton{
+.about {
+    width: 17.22vw;
+    height: 8.33vw;
+    flex-shrink: 0;
+    color: var(--neutral-gray-2-d-2-d-2-d, #2D2D2D);
+    text-align: left;
+    font-family: 'Inter';
+    font-size: 1.11vw;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 150%;
+}
+
+.registerbutton {
     display: block;
-    margin:0 auto;
+    margin: 0 auto;
     width: 9.3vw;
     height: 3.33vw;
     padding: 0.55vw 1.11vw;
@@ -103,78 +114,250 @@ line-height: 150%;
     background: #0C68F4;
     border: none;
     outline: none;
-    color:white;
-    margin-top : 1.74vw;
+    color: white;
+    margin-top: 1.74vw;
+    font-size: 1.11vw;
 
 }
 
-.bottomorange{
+.registerbutton:hover {
+    background: rgb(12, 104, 244, 0.8);
+}
+
+
+.bottomorange {
     position: absolute;
-    bottom:-0.28vw;
+    bottom: -0.45vw;
 }
 
-.ps5image{
+.leftUpperOrangeSvg {}
+
+.ps5image {
     width: 14.6vw;
-height: 11.74vw;
-flex-shrink: 0;
-position: absolute;
-z-index: 1;
-top: 11vw;
-left: 15.83vw;
+    height: 11.74vw;
+    flex-shrink: 0;
+    position: absolute;
+    z-index: 1;
+    top: 11vw;
+    left: 15.83vw;
 
 }
-.leftupperorange{
+
+.leftupperorange {
     position: absolute;
     overflow: hidden;
     border-radius: 0.35vw;
 }
 
-.ps5title{
-color: #FCC870;
-font-family: 'Inter';
-font-size: 1.67vw;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-position: absolute;
-margin-left: 10vw;
-margin-top: 2.22vw;
+.ps5title {
+    color: #FCC870;
+    font-family: 'Inter';
+    font-size: 1.67vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    position: absolute;
+    margin-left: 10vw;
+    margin-top: 2.22vw;
 }
 
-.ps5spec{
-color: #005690;
-font-family: 'Inter';
-font-size: 1.39vw;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-position: absolute;
-top: 17.7vw;
-left: 3.06vw;
-z-index: 1;
+
+
+.ps5spec {
+    color: #005690;
+    font-family: 'Inter';
+    font-size: 1.39vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    position: absolute;
+    top: 17.7vw;
+    left: 3.06vw;
+    z-index: 1;
 }
 
-.registerToPs5{
- position: absolute;
-width: 10.28vw;
-height: 3.2vw;
-padding: 0.55vw 1.11vw;
+.registerToPs5 {
+    position: absolute;
+    width: 10.28vw;
+    height: 3.2vw;
+    padding: 0.55vw 1.11vw;
 
-align-items: center;
+    align-items: center;
 
-top:23.47vw;
-left: 4.583vw;
-border-radius: 0.55vw;
-background: var(--Primary, #0C68F4);
-outline: none;
-color:white;
-border: none;
-color: var(--White, #FFF);
-text-align: center;
+    top: 23.47vw;
+    left: 4.583vw;
+    border-radius: 0.55vw;
+    background: var(--Primary, rgb(12, 104, 244));
+    outline: none;
+    color: white;
+    border: none;
+    color: var(--White, #FFF);
+    text-align: center;
 
-font-family: 'Inter';
-font-size: 1.11vw;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+    font-family: 'Inter';
+    font-size: 1.11vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.registerToPs5:hover{
+    background: var(--Primary, rgb(12, 104, 244,0.8));
+}
+
+@media only screen and (max-width: 768px) {
+
+    .main {
+        margin-inline: 6.67vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: none;
+        margin-right: 0;
+        margin-bottom: 4vw;
+        gap: 4.44vw;
+    }
+
+    .ip15 {
+        width: 86.67vw;
+        height: 47.78vw;
+        border-radius: 1.11vw;
+        margin: 0;
+        margin-left: 1.66vw;
+        overflow: hidden;
+    }
+
+    .ps5 {
+        width: 86.67vw;
+        height: 47.78vw;
+        margin-left: 1.66vw;
+        border-radius: 1.11vw;
+        position: relative;
+    }
+
+    .imageandtitle {
+        margin-inline: 1.67vw;
+    }
+
+    .phonename {
+
+        font-size: 3.89vw;
+        margin-top: 2.89vw;
+        margin-bottom: 9.4vw;
+        margin-left: 2.2vw;
+    }
+
+    .ip15img {
+        width: 45.1vw;
+        height: 33.6vw;
+    }
+
+    .countdown {
+
+        width: fit-content;
+        height: fit-content;
+        margin-top: 3.05vw;
+        margin-bottom: 2vw;
+        gap: 1.2vw;
+    }
+
+
+
+    .counts {
+        width: 5.83vw;
+        height: 5.83vw;
+        border-radius: 0.55vw;
+        border: 0.07vw solid var(--Black, #0C0C0C);
+        padding: 0.4vw;
+        font-size: 1.944vw;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-align: center;
+        text-wrap: wrap;
+    }
+
+    .aboutTitle {
+        font-size: 2.275vw;
+        margin-bottom: 0.63vw;
+    }
+
+    .about {
+        width: 28.6vw;
+        height: 13.6vw;
+        font-size: 1.82vw;
+    }
+
+    .registerbutton {
+        margin: 0 auto;
+        width: 29vw;
+        height: 11.11vw;
+        padding: 0.55vw 1.11vw;
+
+        border-radius: 2.22vw;
+
+        margin-top: 2.78vw;
+        font-size: 3.9vw;
+
+
+
+    }
+
+    /* //////////////////////////////////////////////////////////////////////////// */
+    .bottomorange {
+        position: absolute;
+        bottom: -18.28vw;
+        left: -11vw;
+    }
+
+
+    .ps5image {
+        width: 38.3vw;
+        height: 30.9vw;
+        top: 11vw;
+        left: 46.94vw;
+
+    }
+
+    .leftupperorange {
+        position: absolute;
+        overflow: hidden;
+        border-radius: 1.11vw;
+        right: 51vw;
+        top: -25vw;
+    }
+
+    .ps5title {
+        font-size: 4.44vw;
+        margin-left: 28.05vw;
+        margin-top: 3.42vw;
+    }
+
+
+
+    .ps5spec {
+        font-size: 3.875vw;
+        top: 25.2vw;
+        left: 5.72vw;
+        z-index: 1;
+    }
+
+    .registerToPs5 {
+        position: absolute;
+        width: 24.4vw;
+        height: 6.7vw;
+
+
+
+        top: 33.6vw;
+        left: 14.72vw;
+        border-radius: 1.11vw;
+
+
+
+
+        font-size: 3.89vw;
+
+
+    }
+
 }

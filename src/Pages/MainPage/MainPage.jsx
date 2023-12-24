@@ -10,7 +10,7 @@ import CompanyPromises from '../../MainPageComponents/CompanyPromises/CompanyPro
 import Footer from '../../MainPageComponents/Footer/Footer'
 const MainPage = () => {
   return (
-    <div>
+    <div >
         <CompanyFrame/>
         <SuggestedCategories/>
         <SalesSection/>

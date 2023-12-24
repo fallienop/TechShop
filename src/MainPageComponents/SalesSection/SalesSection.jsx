@@ -13,13 +13,13 @@ const responsive = {
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 2,
-      slidesToSlide: 2 // optional, default to 1.
+      items: 3,
+      slidesToSlide: 1 
     },
     mobile: {
-      breakpoint: { max: 464, min: 0 },
+      breakpoint: { max: 768, min: 0 },
       items: 1,
-      slidesToSlide: 1 // optional, default to 1.
+      slidesToSlide: 1 
     }
   };
   
@@ -55,7 +55,7 @@ const renderCarouselItems = () => {
       items.push(
         <div key={i} className={style.carouselItem}>
           <img draggable="false" className={style.productImage} src={g502} alt="mouse" />
-          <p>Logitech G502 Gaming Mouse</p>
+          <p className={style.productName}>Logitech G502 Gaming Mouse</p>
         </div>
       );
     }

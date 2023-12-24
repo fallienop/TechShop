@@ -1,64 +1,70 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-p{
+
+p {
     margin: 0;
     padding: 0;
 }
-.main{
+
+.main {
     width: 85vw;
     height: 29.17vw;
     margin-inline: 7.64vw;
-    border-radius: 8px;
+    border-radius: 0.55vw;
     background: #223949;
     overflow: hidden;
     position: relative;
-    display:flex;
-    color:white;
-    margin-bottom: 100px;
-}
-.front{
     display: flex;
-    gap: 11.18vw;    
+    color: white;
+    margin-bottom: 7vw;
 }
-.orange{
+
+.front {
+    display: flex;
+    gap: 11.18vw;
+}
+
+.orange {
     width: 55.56vw;
     height: 45.486vw;
     flex-shrink: 0;
     border-radius: 55.56vw;
     background: #FF6951;
-    /* right: -400px; */
+
     right: -26vw;
     bottom: -10.5vw;
     position: absolute;
     z-index: 1;
-   }
-.title{
-   font-family: 'Inter';
-   font-size: 3.056vw;
-   font-style: normal;
-   font-weight: 500;
-   line-height: normal;
-   margin-bottom: 1.11vw;
-  }
-.watch{
+}
+
+.title {
+    font-family: 'Inter';
+    font-size: 3.056vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 1.11vw;
+}
+
+.watch {
     width: 34.72vw;
     height: 23.472vw;
     flex-shrink: 0;
     z-index: 2;
     margin-top: 2.85vw;
-   }
+}
 
-.adv{
+.adv {
     font-family: 'Inter';
     font-size: 1.67vw;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
-   }
+}
 
-.viewwatchbutton{
+.viewwatchbutton {
     margin: 0;
     margin-top: 2.22vw;
-    margin-left: 8.96vw ;
+    margin-left: 8.96vw;
     display: inline-flex;
     padding: 0.56vw 1.11vw;
     justify-content: center;
@@ -72,11 +78,78 @@ p{
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    outline: none; 
+    outline: none;
     border: none;
-   }
-   
-.texts{
+}
+
+.texts {
     margin-top: 8.89vw;
     margin-left: 4.44vw;
-   }
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .main {
+        width: 86.67vw;
+        height: 53.33vw;
+        margin-inline: 7.67vw;
+        border-radius: 1.11vw;
+        margin-bottom: 7vw;
+    }
+
+    .front {
+        display: flex;
+        gap: 0;
+    }
+
+    .orange {
+        width: 84.72vw;
+        height: 64.72vw;
+        border-radius: 84.72vw;
+        right: -50vw;
+        bottom: -5.5vw;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .title {
+
+        font-size: 4.44vw;
+
+        text-wrap: nowrap;
+
+        line-height: 150%;
+        margin-bottom: 2.22vw;
+    }
+
+    .adv {
+        font-size: 2.5vw;
+        margin-left: 0.5vw;
+        text-wrap: nowrap;
+    }
+
+    .watch {
+        width: 49.54vw;
+        height: 33.48vw;
+        flex-shrink: 0;
+        z-index: 2;
+        margin-top: 14.85vw;
+    }
+    
+    .viewwatchbutton {
+        margin: 0;
+        margin-top: 16.11vw;
+        margin-left: 4.16vw;
+       
+        padding: 2.2vw 5.55vw;
+     
+        border-radius: 2.22vw;
+       
+       
+        font-size: 2.78vw;
+        
+      
+    }
+
+}

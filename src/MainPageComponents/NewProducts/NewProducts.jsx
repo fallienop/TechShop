@@ -9,7 +9,7 @@ const newProduct=()=>{
     products.push(
       <div key={i} className={style.newproduct}>
       <img className={style.productphoto} src={vr} alt="vr"/>
-     <hr style={{margin:'0', opacity:'0.6',strokeWidth: '1px', stroke: 'rgba(68, 68, 68, 0.10)'}}/>
+     <hr style={{margin:'0', opacity:'0.6',strokeWidth: '0.07vw', stroke: 'rgba(68, 68, 68, 0.10)'}}/>
       <p className={style.productname}>VR</p>
      
       <div className={style.priceandrating}>

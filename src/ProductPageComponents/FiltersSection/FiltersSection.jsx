@@ -157,7 +157,7 @@ const FiltersSection = () => {
 
       {Object.keys(filters).map((filterKey, ind) => (
         <div key={ind} className={style.filtes}>
-          <p className={style.filtername}>{filterKey}</p>
+          <p className={style.filtername}>{filterKey.endsWith('Id') ? filterKey[0].toUpperCase() + filterKey.slice(1,filterKey.length-2) : filterKey[0].toUpperCase()+ filterKey.slice(1)}</p>
           <Select
             key={filterKey}
             closeMenuOnSelect={false}

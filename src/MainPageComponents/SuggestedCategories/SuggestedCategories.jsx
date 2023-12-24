@@ -25,7 +25,7 @@ const SuggestedCategories = () => {
            ptext = 'pc';
            break;
          case 'Phone':
-           ptext = 'mobile';
+           ptext = 'phone';
            break;
          case 'Gaming':
            ptext = 'gaming';

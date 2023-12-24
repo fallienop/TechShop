@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import style from './ProductsSection.module.css'
 import { useSelector, useDispatch } from 'react-redux';
 import { getrawFilters } from '../../Redux/techshopSlicer';
+import { Link } from 'react-router-dom'
 
 
 const Hline = () => {
@@ -24,6 +25,7 @@ const ProductsSection = () => {
 
   let productType = useSelector(state => state.techshopslice.productType);
   let selectedFilters = useSelector(state => state.techshopslice.selectedFilters);
+  let storedCategories = useSelector(state => state.techshopslice.categories);
   const dispatch = useDispatch();
 
   const getData = async () => {
@@ -107,6 +109,7 @@ const ProductsSection = () => {
   };
 
   useEffect(() => {
+   
     if (selectedFilters && Object.keys(selectedFilters).length !== 0) {
 
      
@@ -158,26 +161,35 @@ const ProductsSection = () => {
 
           setApiData(filteredData);
         }
-
         else {
           setApiData(apiMainData)
         }
+      
       }
     }
 
   }, [selectedFilters]);
 
+  const getCategoryById =(id)=>{
+    if(id>6){
+      return "gaming"
+    }
+    return   String( storedCategories[id]).toLowerCase();
+  }
 
 
   return (
     <div className={style.main}>
       {apiData.map((element) => (
-        element.imageData ? <div key={element.description} className={style.product}>
+        element.imageData ? 
+        <Link key={element.description} to={`/productdetails/${getCategoryById(element.categoryId)}/${element.id}`}>
+        <div  key={element.description} className={style.product}>
           <img src={`data:image/png;base64,${element.imageData}`} />
           <Hline style={{ margin: '0 auto' }} />
           <p>{element.name}</p>
           <p style={{ fontSize: '0.9vw', fontWeight: '300' }}>{element.description}</p>
-        </div> : null
+        </div>   </Link> : null
+   
       ))}
     </div>
   )

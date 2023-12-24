@@ -56,7 +56,7 @@ const ProductTypes = () => {
     <div ref={categoriesref} className={style.categories} >
       <div onClick={(e) => sendProductType(e)} className={style.category}>
         <img src={mobile} alt="mobile" />
-        <p>Mobile</p>
+        <p>Phone</p>
       </div>
 
       <div onClick={(e) => sendProductType(e)} className={style.category}>

@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+.main{
+    display: block;
+    margin-inline: 7.64vw;
+    margin-top: 2vw;
+}
+.product img{
+    width: 400px;
+    height: auto;
+}
+.product{
+    display: flex;
+    gap: 3vw;
+}
+.productname{
+    color: #000;
+
+/* Web/H5 */
+font-family: 'Inter';
+font-size: 1.4vw;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+.productinfo{
+    margin-top: 2vw;
+}

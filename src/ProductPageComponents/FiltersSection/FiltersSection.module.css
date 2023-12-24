@@ -43,7 +43,9 @@
   display: flex;
   justify-content: space-around ;
 }
-
+/* .filters{
+  margin-block: 0.5vw;
+} */
 .priceinput input{
   width: 5.4vw;
   height: 2.5vw;

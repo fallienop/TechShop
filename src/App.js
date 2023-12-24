@@ -5,7 +5,8 @@
   import { createBrowserRouter,RouterProvider,Outlet,Route } from 'react-router-dom';
   import ProductModal from './MainPageComponents/Header/Modals/ProductModal/ProductModal';
   import ProductPage from './Pages/ProductPage/ProductPage'
-  import SearchModal from './MainPageComponents/Header/Modals/SearchModal/SearchModal';
+  import ProductDetails from './Pages/ProductDetails/ProductDetails';
+  
   const AppLayout =()=>{
     return( 
          <>
@@ -24,8 +25,8 @@
         
       },
       {
-        path: "/modal",
-        element: <SearchModal />
+        path: "/productdetails/:category/:productId",
+        element: <ProductDetails />
         
       },
       {

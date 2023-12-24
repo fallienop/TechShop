@@ -101,7 +101,7 @@ const Header = () => {
               FAQ
             </NavLink>
 
-            <NavLink to="/Contact" className={(isActive) => getActiveClass(isActive, '/Contact')} style={(isActive) => getApplyActiveStyle(isActive, '/Contact')}>
+            <NavLink to="/productdetails" className={(isActive) => getActiveClass(isActive, '/Contact')} style={(isActive) => getApplyActiveStyle(isActive, '/Contact')}>
               Contact Us
             </NavLink>
 

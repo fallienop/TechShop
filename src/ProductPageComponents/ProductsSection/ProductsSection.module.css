@@ -1,13 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 .main{
     min-height:50vw ;
     height: fit-content;
     width: 63.33vw;
     border: 0.06vw solid rgba(0, 0, 0, 0.18);
     display: flex;
-    /* justify-content: space-between; */
     gap:1.66vw;
     flex-wrap: wrap;
-    /* box-shadow: 0.14vw 0.07vw 1.4vw #000000; */
+   
 }
 
 .product{
@@ -29,6 +29,48 @@ box-sizing: border-box;
 }
 
 .product p{
-    margin-top: 1.5vw;
+    margin-top: 1vw;
     height: auto;
 }
+
+.elementname{
+    overflow: hidden;
+color: var(--Primary-Primary-500, #063A88);
+text-overflow: ellipsis;
+white-space: nowrap;
+/* Web/Body-md */
+font-family: 'Inter';
+font-size: 1.11vw;
+font-style: normal;
+font-weight: 300;
+line-height: 150%;
+}
+.elementdesc{
+    overflow: hidden;
+ 
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /* Web/Body-md */
+    font-family: 'Inter';
+    font-size: 1.11vw;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 150%;
+}
+
+
+@media only screen and (max-width: 768px) {
+  
+    .main{
+        min-height:50vw ;
+        height: fit-content;
+        width: 71.33vw;
+        margin:0 auto ;
+        border: 0.06vw solid rgba(0, 0, 0, 0.18);
+        display: flex;
+        /* justify-content: space-between; */
+        gap:5.66vw;
+        flex-wrap: wrap;
+        /* box-shadow: 0.14vw 0.07vw 1.4vw #000000; */
+    }
+  }

@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 import style from './SearchModal.module.css';
-
+import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 const SearchModal = () => {
     const getSearchDataPromise = async (url) => {
         let dataRes = await fetch(url);
         let dataJson = await dataRes.json();
         return dataJson;
     }
+    let storedCategories = useSelector(state => state.techshopslice.categories);
 
     const getSearchData = async (e) => {
         let inputValue = e.target.value;
@@ -39,7 +41,13 @@ const SearchModal = () => {
         }
     }
 
-
+    const getCategoryById =(id)=>{
+        if(id>7){
+          return "gaming"
+        }
+        return   String( storedCategories[id]).toLowerCase();
+      }
+    
     const [inputResponse, setInputResponse] = useState([]);
     const [displayState, setDisplayState] = useState('none')
 
@@ -49,10 +57,12 @@ const SearchModal = () => {
             <div style={{ display: displayState }} className={style.responses}>
                 {
                     inputResponse.map((x, ind) => (
+                        <Link to={`/productdetails/${getCategoryById(x.categoryId)}/${x.id}`}>
                         <div key={ind} className={style.response}>
                             <img src={`data:image/png;base64,${x.imageData}`} />
                             <p>{x.name}</p>
                         </div>
+                        </Link>
                     ))
                 }
 

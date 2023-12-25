@@ -4,3 +4,20 @@
     display: flex;
     margin-top: 4vw ;
 }
+.main{
+    position: relative;
+}
+.menuButton{
+    position: absolute;
+    display: flex;
+    gap: 0.5vw;
+    right: 2.78vw;
+}
+.menuButton p{
+font-size: 2vw;
+}
+
+.menuButton img{
+   width: 3vw;
+   height: 3vw;
+    }

@@ -29,7 +29,7 @@ const ProductModal = () => {
       </div>
 
       <div className={style.categoryDetail}>
-        <h1>vsfs</h1>
+        {/* <h1>vsfs</h1> */}
       </div>
   
     </div>

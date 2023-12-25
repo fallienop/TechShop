@@ -18,7 +18,7 @@ const CompanyFrame = () => {
   return (
     <div ref={companyFrameRef} className={style.main}>
       <div className={style.texts}>
-        <h1>Tech Heim</h1>
+        <h1>TechShop</h1>
         <p>
           "Join the <span style={{ color: '#F45E0C' }}>digital revolution</span>"
         </p>

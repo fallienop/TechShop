@@ -86,7 +86,7 @@ const FiltersSection = () => {
                 filterValues.map(async (x) => {
                   return filterkey.endsWith('Id') ? await nameByIdReturner(filterkey, x) : {
                     label: x,
-                    value: x
+                    value: x 
                   };
 
 

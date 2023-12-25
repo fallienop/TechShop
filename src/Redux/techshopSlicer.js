@@ -10,7 +10,8 @@ const initialState = {
         'CPU',
         'GPU',
         'Phone',
-        'Mouse'],
+        'Accessories',
+        'Mouse','Console'],
     selectedFilters: []
 }
 

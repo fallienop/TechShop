@@ -30,9 +30,9 @@ const ProductDetails = () => {
         const response = await fetch(`https://localhost:7167/${x.slice(0, x.length - 2)}/${productData[`${x}`]}`);
         const data = await response.json();
         setProductDataWithId(data);
-        return { name:(x.endsWith('Id')? x.slice(0, x.length - 2) :x).toUpperCase(),data:  data.name }
+        return { name: (x.endsWith('Id') ? x.slice(0, x.length - 2) : x).toUpperCase(), data: data.name }
       } else {
-        return {name: x.toUpperCase() ,data: productData[`${x}`] }
+        return { name: x.toUpperCase(), data: productData[`${x}`] }
       }
     } else {
       return null;
@@ -60,21 +60,19 @@ const ProductDetails = () => {
       <div className={style.info}>
         <div className={style.product}>
           <img src={`data:image/png;base64,${productData.imageData}`} alt="Product" />
-          <div className={style.productinfo}>
-            <p className={style.company}>{productData.company}</p>
-            <p className={style.price}>{productData.price}</p>
-          </div>
+
+        </div>
+        <div className={style.details}>
+          {objList.map((x, index) => (
+            <p key={index}>
+              <span>{x && x.name ? `${x.name}: ` : ''}</span>
+              <span>{x && x.data ? x.data : ''}</span>
+            </p>
+          ))}
         </div>
       </div>
 
-      <div className={style.details}>
-  {objList.map((x, index) => (
-    <p key={index}>
-      <span>{x && x.name ? `${x.name}: ` : ''}</span>
-      <span>{x && x.data ? x.data : ''}</span>
-    </p>
-  ))}
-</div>
+
     </div>
   );
 };

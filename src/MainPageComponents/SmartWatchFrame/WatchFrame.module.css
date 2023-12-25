@@ -81,7 +81,10 @@ p {
     outline: none;
     border: none;
 }
+.viewwatchbutton:hover{
+    background: rgb(255, 105, 81,0.7);
 
+}
 .texts {
     margin-top: 8.89vw;
     margin-left: 4.44vw;

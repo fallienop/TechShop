@@ -1,69 +1,81 @@
-.main{
-    min-height:50vw ;
-    height: fit-content;
-    width: 16.11vw;
-    border: 0.06vw solid rgba(0, 0, 0, 0.18);
-     padding: 1vw;
-
-}
-.main p{
-
-  
+.main {
+  min-height: 50vw;
+  height: fit-content;
+  width: 16.11vw;
+  border: 0.06vw solid rgba(0, 0, 0, 0.18);
+  padding: 1vw;
 }
 
-.applyfilterbutton{
+.applyfilterbutton {
   display: block;
-    color: cyan;
-    text-align: right;
-    font-weight: 400;
-    /* text-decoration: underline; */
-    font-size: 1vw;
-    transition: color 0.3s ease-in-out;
-    margin-bottom: 1vw;
-
+  color: cyan;
+  text-align: right;
+  font-weight: 400;
+  font-size: 1.2vw;
+  transition: color 0.3s ease-in-out;
+  margin-bottom: 1vw;
 }
 
-.applyfilterbutton:hover{
-  color:rgb(59, 71, 163);
-
+.applyfilterbutton:hover {
+  color: rgb(59, 71, 163);
 }
-.filtername{
-  /* text-align: left; */
+
+.filtername {
   margin-block: 0.5vw;
-  /* margin-left: 0.5vw; */
 }
 
-.priceinputBox p{
-  /* text-align: left;   */
-  /* margin-left: 0.5vw; */
+.priceinputBox p {
   margin-block: 0.5vw;
-
 }
-.priceinput{
+
+.priceinput {
   display: flex;
-  justify-content: space-around ;
+  justify-content: space-around;
 }
-/* .filters{
-  margin-block: 0.5vw;
-} */
-.priceinput input{
+
+.priceinput input {
   width: 5.4vw;
   height: 2.5vw;
 }
 
-.reseter{
+.reseter {
   margin-top: 1vw;
   text-align: right;
   color: cyan;
   margin-right: 1vw;
-  
-float: right;
+  float: right;
 }
 
-.reseter:hover{
+.reseter:hover {
   transition: color 0.3s ease-in-out;
+  color: rgb(59, 71, 163);
+}
 
+@media only screen and (max-width: 768px) {
+  .applyfilterbutton {
+    display: block;
+    color: cyan;
+    text-align: right;
+    font-weight: 400;
+    font-size: 2.6vw;
+    text-wrap: nowrap;
+ 
+    margin-bottom: 1vw;
+  }
+  .main{
+    position: absolute;
+    top: -3.33vw;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    z-index: 1; 
+    height: 100%;
+    width: 30vw;
+  }
 
-  color:rgb(59, 71, 163);
-
+  .priceinput input {
+    width: 8.4vw;
+    height: 4vw;
+  }
 }

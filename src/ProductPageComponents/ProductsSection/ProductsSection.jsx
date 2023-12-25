@@ -4,10 +4,12 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getrawFilters } from '../../Redux/techshopSlicer';
 import { Link } from 'react-router-dom'
 
-
+const isMobile=window.innerWidth<768;
 const Hline = () => {
+
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="258" height="2" viewBox="0 0 200 2" fill="none">
+    !isMobile&&(
+    <svg xmlns="http://www.w3.org/2000/svg" width="18vw" height="0.5vw" viewBox="0 0 200 2" fill="none">
       <path d="M1 1H257" strokeLinecap="round" stroke="url(#paint0_linear_4366_1172)" />
       <defs>
         <linearGradient id="paint0_linear_4366_1172" x1="1" y1="2.00002" x2="257" y2="1.00002" gradientUnits="userSpaceOnUse">
@@ -16,7 +18,7 @@ const Hline = () => {
           <stop offset="0.9947" stopColor="#428AF6" stopOpacity="0.3" />
         </linearGradient>
       </defs>
-    </svg>
+    </svg>)
   );
 };
 
@@ -171,7 +173,7 @@ const ProductsSection = () => {
   }, [selectedFilters]);
 
   const getCategoryById =(id)=>{
-    if(id>6){
+    if(id>7 ){
       return "gaming"
     }
     return   String( storedCategories[id]).toLowerCase();
@@ -186,8 +188,9 @@ const ProductsSection = () => {
         <div  key={element.description} className={style.product}>
           <img src={`data:image/png;base64,${element.imageData}`} />
           <Hline style={{ margin: '0 auto' }} />
-          <p>{element.name}</p>
-          <p style={{ fontSize: '0.9vw', fontWeight: '300' }}>{element.description}</p>
+          <p className={style.elementname}>{element.name}</p>
+          <p  className={style.elementdesc} style={{ fontSize: '0.9vw', fontWeight: '300' }}>{element.description}</p>
+          <p style={{margin:'0',color:'gray'}}>{element.price}azn </p>
         </div>   </Link> : null
    
       ))}

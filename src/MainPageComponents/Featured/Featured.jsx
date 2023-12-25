@@ -1,9 +1,9 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import { useMediaQuery } from 'react-responsive';
 import style from './Featured.module.css';
 import ip15 from '../../Images/Featured/iphone15.png';
 import ps5 from '../../Images/Featured/ps5.png';
-
+import { Link } from 'react-router-dom';
 const leftUpperOrange = () => (
   <svg className={style.leftUpperOrangeSvg} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 102" fill="none">
     <style>
@@ -48,6 +48,28 @@ const bottomOrange = () => (
 
 const Featured = () => {
   const isMobile = useMediaQuery({ maxWidth: 768 });
+  const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  useEffect(() => {
+    const targetDate = new Date('December 31, 2023 23:59:59');
+
+    const calculateCountdown = () => {
+      const now = new Date();
+      const difference = targetDate - now;
+
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+      setCountdown({ days, hours, minutes, seconds });
+    };
+
+    const countdownInterval = setInterval(calculateCountdown, 1000);
+
+    calculateCountdown(); 
+
+    return () => clearInterval(countdownInterval);
+  }, []);
 
   return (
     <div className={style.main}>
@@ -58,23 +80,23 @@ const Featured = () => {
         </div>
         <div className={style.countdownandabout}>
           <div className={style.countdown}>
-            <div className={style.counts}><span style={{ wordSpacing: 'wrap' }}>8 days</span></div>
-            <div className={style.counts}>15 hour</div>
+          <div className={style.counts}>{countdown.days} day</div>
+        <div className={style.counts}>{countdown.hours} hour</div>
             {isMobile ? (
               <>
-                <div className={style.counts}>53 min</div>
-                <div className={style.counts}>43 sec</div>
+                <div className={style.counts}>{countdown.minutes} min</div>
+        <div className={style.counts}>{countdown.seconds} sec</div>
               </>
             ) : (
               <>
-                <div className={style.counts}>53 minute</div>
-                <div className={style.counts}>43 second</div>
+                 <div className={style.counts}>{countdown.minutes} minute</div>
+        <div className={style.counts}>{countdown.seconds} second</div>
               </>
             )}
           </div>
           <p className={style.aboutTitle}>It feels good to be the first</p>
           <p className={style.about}>Get ready for the future of smartphones. Experience innovation like never before. Stay tuned for the big iPhone 15 pre-sale.</p>
-          <button className={style.registerbutton}>Shop Now</button>
+          <Link  to={`/productdetails/phone/5`}> <button className={style.registerbutton}>Shop Now</button></Link>
         </div>
       </div>
       <div className={style.ps5}>
@@ -87,7 +109,9 @@ const Featured = () => {
           {bottomOrange()}
         </div>
         <img src={ps5} className={style.ps5image} alt="playstation5" />
+        < Link  to={`/productdetails/gaming/2`}>
         <button className={style.registerToPs5}>Buy Now</button>
+        </Link>
       </div>
     </div>
   );

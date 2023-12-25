@@ -49,14 +49,14 @@ const SuggestedCategories = () => {
             <ul>
                <Link to={`/products`}>
                   <li onClick={(e) => sendType(e)} >
-                     <img src={laptopP} alt="phone" className={style.simg} />
+                     <img src={laptopP} alt="laptopP" className={style.simg} />
                      <p>Laptops</p>
                   </li>
                </Link>
 
                <Link to={`/products`}>
                <li onClick={(e) => sendType(e)}>
-                  <img  src={pcCase} alt="phone" className={style.simg} />
+                  <img  src={pcCase} alt="pcCase" className={style.simg} />
                   <p>PC</p>
 
                </li>
@@ -65,21 +65,21 @@ const SuggestedCategories = () => {
              <Link to={`/products`}>
 
                <li onClick={(e) => sendType(e)}>
-                  <img  className={style.simg} src={phoneP} alt="phone" />
+                  <img  className={style.simg} src={phoneP} alt="phoneP" />
                   <p>Phone</p>
 
                </li>
               </Link>
                <Link to={`/products`}>
                   <li onClick={(e) => sendType(e)} >
-                     <img className={style.simg} src={dualshock} alt="phone" />
+                     <img className={style.simg} src={dualshock} alt="dualshock" />
                      <p>Gaming</p>
                   </li>
                </Link>
                <Link to={`/products`}>
                <li onClick={(e) => sendType(e)}>
 
-                  <img className={style.simg} src={watch} alt="phone" />
+                  <img className={style.simg} src={watch} alt="watch" />
                   <p>Accessories</p>
 
                </li>

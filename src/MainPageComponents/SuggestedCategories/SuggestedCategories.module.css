@@ -12,7 +12,7 @@ ul{
 
 .categories ul li{
     padding-block: 0.55vw;
-    /* padding-inline: 1.25vw; */
+    padding-inline: 1.25vw;
     box-shadow: -0.14vw 0.14vw 1.04vw -0.07vw rgba(113, 113, 113, 0.12);
     border-radius: 0.55vw;
 }
@@ -60,7 +60,7 @@ line-height: 150%;
 
     .categories ul li{
         padding: 2vw;
-        /* padding-inline: 1.25vw; */
+        padding-inline: 1.25vw;
         box-shadow: -0.55vw 0.55vw 4vw -0.27vw rgba(113, 113, 113, 0.28);
         border-radius: 2.22vw;
     }

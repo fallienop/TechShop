@@ -31,11 +31,11 @@ const ProductsSection = () => {
   const dispatch = useDispatch();
 
   const getData = async () => {
-    let data = await fetch(`https://localhost:7167/getall`);;
+    let data = await fetch(`'https://cfhqj2mq-7167.euw.devtunnels.ms/getall`);;
 
 
     if (productType) {
-      data = await fetch(`https://localhost:7167/${productType}`);
+      data = await fetch(`'https://cfhqj2mq-7167.euw.devtunnels.ms/${productType}`);
     }
     let jsondata = await data.json();
     var arr = Object.keys(jsondata).reduce(function (res, v) {
@@ -186,7 +186,8 @@ const ProductsSection = () => {
         element.imageData ? 
         <Link key={element.description} to={`/productdetails/${getCategoryById(element.categoryId)}/${element.id}`}>
         <div  key={element.description} className={style.product}>
-          <img src={`data:image/png;base64,${element.imageData}`} />
+          <div className={style.imageContainer}> <img src={`data:image/png;base64,${element.imageData}`} /></div>
+         
           <Hline style={{ margin: '0 auto' }} />
           <p className={style.elementname}>{element.name}</p>
           <p  className={style.elementdesc} style={{ fontSize: '0.9vw', fontWeight: '300' }}>{element.description}</p>

@@ -42,7 +42,7 @@ const FiltersSection = () => {
 
   const nameByIdReturner = (category, val) => {
 
-    return fetch(`https://localhost:7167/${category}names/${val}`,{
+    return fetch(`'https://cfhqj2mq-7167.euw.devtunnels.ms/${category}names/${val}`,{
       headers : { 
         'Content-Type': 'application/json',
         'Accept': 'application/json'

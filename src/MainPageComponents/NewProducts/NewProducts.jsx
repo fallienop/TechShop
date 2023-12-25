@@ -3,15 +3,17 @@ import style from './NewProducts.module.css';
 import vr from '../../Images/NewProducts/vr.png';
 import star from '../../Images/NewProducts/Star.svg';
 import { Link } from 'react-router-dom';
-const getProduct = async (id) => {
-  let resp = await fetch(`https://localhost:7167/laptop/${id}`);
-  let data = await resp.json();
-  return data;
-};
+import { useSelector } from 'react-redux';
 
 const NewProduct = ({ id }) => {
+  let mainURL = useSelector(state => state.techshopslice.mainURL);
   const [productData, setProductData] = useState(null);
-
+  const getProduct = async (id) => {
+    let resp = await fetch(`${mainURL}/laptop/${id}`);
+    let data = await resp.json();
+    return data;
+  };
+  
   useEffect(() => {
     const fetchData = async () => {
       try {

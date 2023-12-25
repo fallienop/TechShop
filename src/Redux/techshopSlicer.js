@@ -12,7 +12,9 @@ const initialState = {
         'Phone',
         'Accessories',
         'Mouse','Console'],
-    selectedFilters: []
+    selectedFilters: [],
+    // mainURL:'https://localhost:7167'
+  mainURL:'https://cfhqj2mq-7167.euw.devtunnels.ms'
 }
 
 export const techshopSlicer = createSlice({

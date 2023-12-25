@@ -6,7 +6,8 @@ import Select from 'react-select';
 import makeAnimated from 'react-select/animated';
 
 const FiltersSection = () => {
-
+  
+  let mainURL = useSelector(state => state.techshopslice.mainURL);
   const dispatch = useDispatch();
   const rawFilters = useSelector((state) => state.techshopslice.rawFilters);
   const reduxCategories = useSelector((state) => state.techshopslice.categories);
@@ -42,7 +43,7 @@ const FiltersSection = () => {
 
   const nameByIdReturner = (category, val) => {
 
-    return fetch(`'https://cfhqj2mq-7167.euw.devtunnels.ms/${category}names/${val}`,{
+    return fetch(`${mainURL}/${category}names/${val}`,{
       headers : { 
         'Content-Type': 'application/json',
         'Accept': 'application/json'

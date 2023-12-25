@@ -28,14 +28,15 @@ const ProductsSection = () => {
   let productType = useSelector(state => state.techshopslice.productType);
   let selectedFilters = useSelector(state => state.techshopslice.selectedFilters);
   let storedCategories = useSelector(state => state.techshopslice.categories);
+  let mainURL = useSelector(state => state.techshopslice.mainURL);
   const dispatch = useDispatch();
 
   const getData = async () => {
-    let data = await fetch(`'https://cfhqj2mq-7167.euw.devtunnels.ms/getall`);;
+    let data = await fetch(`${mainURL}/getall`);;
 
 
     if (productType) {
-      data = await fetch(`'https://cfhqj2mq-7167.euw.devtunnels.ms/${productType}`);
+      data = await fetch(`${mainURL}/${productType}`);
     }
     let jsondata = await data.json();
     var arr = Object.keys(jsondata).reduce(function (res, v) {

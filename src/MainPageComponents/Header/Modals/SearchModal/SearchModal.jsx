@@ -8,6 +8,8 @@ const SearchModal = () => {
         let dataJson = await dataRes.json();
         return dataJson;
     }
+    let mainURL = useSelector(state => state.techshopslice.mainURL);
+
     let storedCategories = useSelector(state => state.techshopslice.categories);
 
     const getSearchData = async (e) => {
@@ -15,7 +17,7 @@ const SearchModal = () => {
 
         if (inputValue.trim() !== "") {
             let inputEncoded = encodeURIComponent(inputValue);
-            let url = `https://localhost:7167/getbysearch/${inputEncoded}`;
+            let url = `${mainURL}/getbysearch/${inputEncoded}`;
 
             try {
                 let response = await getSearchDataPromise(url);

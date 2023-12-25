@@ -28,7 +28,15 @@ const responsive = {
 const SalesSection = () => {
   const [carouselItems, setCarouselItems] = useState([]);
   let storedCategories = useSelector(state => state.techshopslice.categories);
-
+  let mainURL = useSelector(state => state.techshopslice.mainURL);
+  const getData = async () => {
+    let resp = await fetch(`${mainURL}/getall`);
+    let jsondata = await resp.json();
+    var arr = Object.keys(jsondata).reduce(function (res, v) {
+      return res.concat(jsondata[v]);
+    }, []);
+    return arr;
+  };
   useEffect(() => {
     fetchData();
   }, []);
@@ -78,14 +86,7 @@ const SalesSection = () => {
   );
 };
 
-const getData = async () => {
-  let resp = await fetch(`https://localhost:7167/getall`);
-  let jsondata = await resp.json();
-  var arr = Object.keys(jsondata).reduce(function (res, v) {
-    return res.concat(jsondata[v]);
-  }, []);
-  return arr;
-};
+
 
 export default SalesSection;
   

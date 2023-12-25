@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import style from './ProductDetails.module.css';
 import { useParams } from 'react-router-dom';
-
+import { useSelector } from 'react-redux';
 const ProductDetails = () => {
   const { category, productId } = useParams();
   const [productData, setProductData] = useState({});
   const [productDataWithId, setProductDataWithId] = useState({});
+  let mainURL = useSelector(state => state.techshopslice.mainURL);
 
   const setProductDetail = async () => {
-    let response = await fetch(`https://localhost:7167/${category}/${productId}`);
+    let response = await fetch(`${mainURL}/${category}/${productId}`);
     let data = await response.json();
     return data;
   };
@@ -27,7 +28,7 @@ const ProductDetails = () => {
 
     if (!arr.includes(x)) {
       if (x.endsWith('Id')) {
-        const response = await fetch(`https://localhost:7167/${x.slice(0, x.length - 2)}/${productData[`${x}`]}`);
+        const response = await fetch(`${mainURL}/${x.slice(0, x.length - 2)}/${productData[`${x}`]}`);
         const data = await response.json();
         setProductDataWithId(data);
         return { name: (x.endsWith('Id') ? x.slice(0, x.length - 2) : x).toUpperCase(), data: data.name }

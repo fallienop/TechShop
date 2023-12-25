@@ -96,7 +96,7 @@ const Featured = () => {
           </div>
           <p className={style.aboutTitle}>It feels good to be the first</p>
           <p className={style.about}>Get ready for the future of smartphones. Experience innovation like never before. Stay tuned for the big iPhone 15 pre-sale.</p>
-          <Link  to={`/productdetails/phone/5`}> <button className={style.registerbutton}>Shop Now</button></Link>
+          <Link  to={`/productdetails/phone/1`}> <button className={style.registerbutton}>Shop Now</button></Link>
         </div>
       </div>
       <div className={style.ps5}>
@@ -109,7 +109,7 @@ const Featured = () => {
           {bottomOrange()}
         </div>
         <img src={ps5} className={style.ps5image} alt="playstation5" />
-        < Link  to={`/productdetails/gaming/2`}>
+        < Link  to={`/productdetails/gaming/1`}>
         <button className={style.registerToPs5}>Buy Now</button>
         </Link>
       </div>

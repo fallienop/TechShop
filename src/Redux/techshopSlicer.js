@@ -11,10 +11,12 @@ const initialState = {
         'GPU',
         'Phone',
         'Accessories',
-        'Mouse','Console'],
+        'Mouse',
+        'Console',
+        'Headset'],
     selectedFilters: [],
-    // mainURL:'https://localhost:7167'
-  mainURL:'https://cfhqj2mq-7167.euw.devtunnels.ms'
+    mainURL:'https://localhost:7167'
+//   mainURL:'https://cfhqj2mq-7167.euw.devtunnels.ms'
 }
 
 export const techshopSlicer = createSlice({

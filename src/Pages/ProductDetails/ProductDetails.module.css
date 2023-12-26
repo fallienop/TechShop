@@ -13,6 +13,8 @@
     .product{
         display: flex;
         gap: 3vw;
+        width: fit-content;
+        height: fit-content;
     }
     .productname{
         color: #000;

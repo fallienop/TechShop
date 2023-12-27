@@ -10,6 +10,7 @@ const ProductDetails = () => {
 
   const setProductDetail = async () => {
     let response = await fetch(`${mainURL}/${category}/${productId}`)
+    console.log(response);
     let data = await response.json();
     return data;
   };

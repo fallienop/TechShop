@@ -6,7 +6,7 @@ const initialState = {
     categories: ['',
         'Laptop',
         'PC',
-        'Monitor',
+        'Screen',
         'CPU',
         'GPU',
         'Phone',

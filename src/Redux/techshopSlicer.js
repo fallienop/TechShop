@@ -15,8 +15,8 @@ const initialState = {
         'Console',
         'Headset'],
     selectedFilters: [],
-    // mainURL:'https://localhost:7167'
-  mainURL:'https://s2qnstn6-7167.euw.devtunnels.ms'
+    mainURL:'https://localhost:7167'
+//   mainURL:'https://s2qnstn6-7167.euw.devtunnels.ms'
 }
 
 export const techshopSlicer = createSlice({

@@ -31,7 +31,6 @@ const SalesSection = () => {
   let mainURL = useSelector(state => state.techshopslice.mainURL);
   const getData = async () => {
     let resp = await fetch(`${mainURL}/getall`,{headers: {'Access-Control-Allow-Origin': '*'}})
-  console.log(`${mainURL}/getall`);
     let jsondata = await resp.json();
     var arr = Object.keys(jsondata).reduce(function (res, v) {
       return res.concat(jsondata[v]);
@@ -53,7 +52,7 @@ const SalesSection = () => {
       .filter((x) => x.imageData) // Filter out items where imageData is empty
       .map((x) => (
         
-        <Link to={`/productdetails/${getCategoryById(x.categoryId)}/${x.id}`}>
+        <Link key={x.id} to={`/productdetails/${getCategoryById(x.categoryId)}/${x.id}`}>
         <div key={x.id} className={style.carouselItem}>
           <img
             draggable="false"

@@ -9,9 +9,7 @@ const ProductDetails = () => {
   let mainURL = useSelector(state => state.techshopslice.mainURL);
 
   const setProductDetail = async () => {
-    let response = await fetch(`${mainURL}/${category}/${productId}`, {
-      mode: 'no-cors'
-  });
+    let response = await fetch(`${mainURL}/${category}/${productId}`)
     let data = await response.json();
     return data;
   };

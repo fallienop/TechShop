@@ -30,7 +30,8 @@ const SalesSection = () => {
   let storedCategories = useSelector(state => state.techshopslice.categories);
   let mainURL = useSelector(state => state.techshopslice.mainURL);
   const getData = async () => {
-    let resp = await fetch(`${mainURL}/getall`);
+    let resp = await fetch(`${mainURL}/getall`,{headers: {'Access-Control-Allow-Origin': '*'}})
+  console.log(`${mainURL}/getall`);
     let jsondata = await resp.json();
     var arr = Object.keys(jsondata).reduce(function (res, v) {
       return res.concat(jsondata[v]);

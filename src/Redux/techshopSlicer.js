@@ -15,7 +15,8 @@ const initialState = {
         'Console',
         'Headset'],
     selectedFilters: [],
-    mainURL:'https://localhost:7167'
+    // mainURL:'https://localhost:7167'
+    mainURL:'http://172.17.64.135:5217'
 //   mainURL:'https://s2qnstn6-7167.euw.devtunnels.ms'
 }
 

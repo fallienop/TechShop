@@ -9,7 +9,7 @@ const NewProduct = ({ id }) => {
   let mainURL = useSelector(state => state.techshopslice.mainURL);
   const [productData, setProductData] = useState(null);
   const getProduct = async (id) => {
-    let resp = await fetch(`${mainURL}/laptop/${id}`);
+    let resp = await fetch(`${mainURL}/laptop/${id}`)
     let data = await resp.json();
     return data;
   };

@@ -9,7 +9,9 @@ const ProductDetails = () => {
   let mainURL = useSelector(state => state.techshopslice.mainURL);
 
   const setProductDetail = async () => {
-    let response = await fetch(`${mainURL}/${category}/${productId}`);
+    let response = await fetch(`${mainURL}/${category}/${productId}`, {
+      mode: 'no-cors'
+  });
     let data = await response.json();
     return data;
   };
@@ -29,6 +31,7 @@ const ProductDetails = () => {
     if (!arr.includes(x)) {
       if (x.endsWith('Id')) {
         const response = await fetch(`${mainURL}/${x.slice(0, x.length - 2)}/${productData[`${x}`]}`);
+     
         const data = await response.json();
         setProductDataWithId(data);
         return { name: (x.endsWith('Id') ? x.slice(0, x.length - 2) : x).toUpperCase(), data: data.name }

@@ -4,7 +4,10 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 const SearchModal = () => {
     const getSearchDataPromise = async (url) => {
-        let dataRes = await fetch(url);
+        let dataRes = await fetch(url,{
+            mode: 'no-cors'
+        });
+        
         let dataJson = await dataRes.json();
         return dataJson;
     }
